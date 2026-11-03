@@ -1,0 +1,3026 @@
+{
+  "id": "ygpa-z7cr",
+  "name": "Housing Maintenance Code Complaints and Problems",
+  "assetType": "dataset",
+  "attribution": "Department of Housing Preservation & Development (HPD)",
+  "attributionLink": "https://hpdonline.nyc.gov/hpdonline/",
+  "averageRating": 0,
+  "category": "Housing & Development",
+  "createdAt": 1667570424,
+  "description": "The Department of Housing Preservation and Development (HPD) records complaints that are made by the public for conditions which violate the New York City Housing Maintenance Code (HMC) or the New York State Multiple Dwelling Law (MDL).",
+  "diciBackend": false,
+  "displayType": "table",
+  "downloadCount": 16376,
+  "hideFromCatalog": false,
+  "hideFromDataJson": false,
+  "locked": false,
+  "newBackend": true,
+  "numberOfComments": 0,
+  "oid": 39604963,
+  "provenance": "official",
+  "publicationAppendEnabled": false,
+  "publicationDate": 1684523106,
+  "publicationGroup": 18946713,
+  "publicationStage": "published",
+  "rowClass": "",
+  "rowIdentifierColumnId": 575961539,
+  "rowsUpdatedAt": 1791481246,
+  "rowsUpdatedBy": "5fuc-pqz2",
+  "tableId": 19159064,
+  "totalTimesRated": 0,
+  "viewCount": 23056,
+  "viewLastModified": 1788462138,
+  "viewType": "tabular",
+  "approvals": [
+    {
+      "reviewedAt": 1691432394,
+      "reviewedAutomatically": false,
+      "state": "approved",
+      "submissionId": 5681823,
+      "submissionObject": "public_audience_request",
+      "submissionOutcome": "change_audience",
+      "submittedAt": 1691432373,
+      "targetAudience": "public",
+      "workflowId": 2285,
+      "reviewer": {
+        "id": "d5dp-fses",
+        "displayName": "afinkel"
+      },
+      "submissionDetails": {
+        "permissionType": "read"
+      },
+      "submissionOutcomeApplication": {
+        "endedAt": 1691432394,
+        "failureCount": 0,
+        "startedAt": 1691432394,
+        "status": "success"
+      },
+      "submitter": {
+        "id": "d5dp-fses",
+        "displayName": "afinkel"
+      }
+    }
+  ],
+  "clientContext": {
+    "clientContextVariables": [],
+    "inheritedVariables": {}
+  },
+  "columns": [
+    {
+      "id": 575961538,
+      "name": "Received Date",
+      "dataTypeName": "calendar_date",
+      "description": "Date when the complaint was received",
+      "fieldName": "received_date",
+      "position": 1,
+      "renderTypeName": "calendar_date",
+      "tableColumnId": 144496305,
+      "cachedContents": {
+        "non_null": "14112972",
+        "largest": "2024-02-20T00:08:39.000",
+        "null": "0",
+        "top": [
+          {
+            "item": "2016-02-03T14:58:36.000",
+            "count": "94"
+          },
+          {
+            "item": "2014-01-26T15:18:49.000",
+            "count": "89"
+          },
+          {
+            "item": "2024-02-01T11:22:28.000",
+            "count": "80"
+          },
+          {
+            "item": "2012-07-12T07:46:36.000",
+            "count": "80"
+          },
+          {
+            "item": "2011-10-17T18:05:34.000",
+            "count": "78"
+          },
+          {
+            "item": "2016-02-03T11:10:55.000",
+            "count": "77"
+          },
+          {
+            "item": "2014-01-12T20:24:04.000",
+            "count": "74"
+          },
+          {
+            "item": "2023-10-13T09:19:26.000",
+            "count": "72"
+          },
+          {
+            "item": "2008-01-11T12:31:17.000",
+            "count": "70"
+          },
+          {
+            "item": "2013-07-17T17:30:13.000",
+            "count": "70"
+          },
+          {
+            "item": "2011-01-28T23:58:03.000",
+            "count": "69"
+          },
+          {
+            "item": "2011-01-28T05:04:58.000",
+            "count": "66"
+          },
+          {
+            "item": "2011-10-23T12:32:18.000",
+            "count": "65"
+          },
+          {
+            "item": "2011-09-01T21:23:05.000",
+            "count": "65"
+          },
+          {
+            "item": "2014-02-09T18:05:39.000",
+            "count": "60"
+          },
+          {
+            "item": "2013-06-04T17:41:00.000",
+            "count": "60"
+          },
+          {
+            "item": "2011-01-31T17:32:01.000",
+            "count": "59"
+          },
+          {
+            "item": "2016-07-12T11:10:31.000",
+            "count": "59"
+          },
+          {
+            "item": "2023-08-16T10:54:00.000",
+            "count": "59"
+          },
+          {
+            "item": "2013-05-13T16:00:52.000",
+            "count": "58"
+          }
+        ],
+        "smallest": "2001-12-16T10:30:00.000",
+        "count": "14112972",
+        "cardinality": "7458074"
+      },
+      "format": {
+        "view": "date"
+      }
+    },
+    {
+      "id": 575961539,
+      "name": "Problem ID",
+      "dataTypeName": "number",
+      "description": "Unique identifier of this problem",
+      "fieldName": "problem_id",
+      "position": 2,
+      "renderTypeName": "number",
+      "tableColumnId": 144496294,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "25212128",
+        "null": "0",
+        "top": [
+          {
+            "item": "2821852",
+            "count": "1"
+          },
+          {
+            "item": "2821853",
+            "count": "1"
+          },
+          {
+            "item": "2821855",
+            "count": "1"
+          },
+          {
+            "item": "2821856",
+            "count": "1"
+          },
+          {
+            "item": "2821857",
+            "count": "1"
+          },
+          {
+            "item": "2821858",
+            "count": "1"
+          },
+          {
+            "item": "2821860",
+            "count": "1"
+          },
+          {
+            "item": "2821861",
+            "count": "1"
+          },
+          {
+            "item": "2821862",
+            "count": "1"
+          },
+          {
+            "item": "2821864",
+            "count": "1"
+          },
+          {
+            "item": "2821865",
+            "count": "1"
+          },
+          {
+            "item": "2821866",
+            "count": "1"
+          },
+          {
+            "item": "2821867",
+            "count": "1"
+          },
+          {
+            "item": "2821868",
+            "count": "1"
+          },
+          {
+            "item": "2821869",
+            "count": "1"
+          },
+          {
+            "item": "2821870",
+            "count": "1"
+          },
+          {
+            "item": "2821871",
+            "count": "1"
+          },
+          {
+            "item": "2821873",
+            "count": "1"
+          },
+          {
+            "item": "2821874",
+            "count": "1"
+          },
+          {
+            "item": "2821875",
+            "count": "1"
+          }
+        ],
+        "smallest": "2821851",
+        "count": "14116350",
+        "cardinality": "14116350"
+      },
+      "format": {
+        "noCommas": "true"
+      }
+    },
+    {
+      "id": 575961540,
+      "name": "Complaint ID",
+      "dataTypeName": "number",
+      "description": "Unique identifier of the complaint this problem is associated with",
+      "fieldName": "complaint_id",
+      "position": 3,
+      "renderTypeName": "number",
+      "tableColumnId": 144496296,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "12767503",
+        "null": "0",
+        "top": [
+          {
+            "item": "7851275",
+            "count": "94"
+          },
+          {
+            "item": "6750024",
+            "count": "89"
+          },
+          {
+            "item": "6031266",
+            "count": "80"
+          },
+          {
+            "item": "5708369",
+            "count": "78"
+          },
+          {
+            "item": "7850910",
+            "count": "77"
+          },
+          {
+            "item": "6716077",
+            "count": "74"
+          },
+          {
+            "item": "12361482",
+            "count": "72"
+          },
+          {
+            "item": "6475866",
+            "count": "70"
+          },
+          {
+            "item": "4087934",
+            "count": "70"
+          },
+          {
+            "item": "5471945",
+            "count": "69"
+          },
+          {
+            "item": "5470652",
+            "count": "66"
+          },
+          {
+            "item": "5714686",
+            "count": "65"
+          },
+          {
+            "item": "5676611",
+            "count": "65"
+          },
+          {
+            "item": "6443148",
+            "count": "60"
+          },
+          {
+            "item": "6782736",
+            "count": "60"
+          },
+          {
+            "item": "8041749",
+            "count": "59"
+          },
+          {
+            "item": "12279419",
+            "count": "59"
+          },
+          {
+            "item": "5475637",
+            "count": "59"
+          },
+          {
+            "item": "12360389",
+            "count": "58"
+          },
+          {
+            "item": "6426291",
+            "count": "58"
+          }
+        ],
+        "smallest": "1559194",
+        "count": "14116350",
+        "cardinality": "7573685"
+      },
+      "format": {
+        "noCommas": "true"
+      }
+    },
+    {
+      "id": 575961541,
+      "name": "Building ID",
+      "dataTypeName": "number",
+      "description": "Unique identifier given to a building record",
+      "fieldName": "building_id",
+      "position": 4,
+      "renderTypeName": "number",
+      "tableColumnId": 144496274,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "1012156",
+        "null": "0",
+        "top": [
+          {
+            "item": "114412",
+            "count": "21654"
+          },
+          {
+            "item": "6131",
+            "count": "16894"
+          },
+          {
+            "item": "811407",
+            "count": "14292"
+          },
+          {
+            "item": "125695",
+            "count": "12123"
+          },
+          {
+            "item": "51000",
+            "count": "11555"
+          },
+          {
+            "item": "294912",
+            "count": "11413"
+          },
+          {
+            "item": "81982",
+            "count": "10414"
+          },
+          {
+            "item": "13120",
+            "count": "9503"
+          },
+          {
+            "item": "65175",
+            "count": "8120"
+          },
+          {
+            "item": "808361",
+            "count": "8034"
+          },
+          {
+            "item": "428710",
+            "count": "7972"
+          },
+          {
+            "item": "116740",
+            "count": "7828"
+          },
+          {
+            "item": "370489",
+            "count": "7655"
+          },
+          {
+            "item": "46569",
+            "count": "7623"
+          },
+          {
+            "item": "52288",
+            "count": "7173"
+          },
+          {
+            "item": "411605",
+            "count": "7076"
+          },
+          {
+            "item": "327173",
+            "count": "6739"
+          },
+          {
+            "item": "53115",
+            "count": "6600"
+          },
+          {
+            "item": "108628",
+            "count": "6598"
+          },
+          {
+            "item": "89017",
+            "count": "6173"
+          }
+        ],
+        "smallest": "1",
+        "count": "14116350",
+        "cardinality": "260182"
+      },
+      "format": {
+        "noCommas": "true"
+      }
+    },
+    {
+      "id": 575961542,
+      "name": "Borough",
+      "dataTypeName": "text",
+      "description": "Complaint borough",
+      "fieldName": "borough",
+      "position": 5,
+      "renderTypeName": "text",
+      "tableColumnId": 144496302,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "STATEN ISLAND",
+        "null": "0",
+        "top": [
+          {
+            "item": "BROOKLYN",
+            "count": "4798625"
+          },
+          {
+            "item": "BRONX",
+            "count": "4394465"
+          },
+          {
+            "item": "MANHATTAN",
+            "count": "2981916"
+          },
+          {
+            "item": "QUEENS",
+            "count": "1722087"
+          },
+          {
+            "item": "STATEN ISLAND",
+            "count": "219257"
+          }
+        ],
+        "smallest": "BRONX",
+        "count": "14116350",
+        "cardinality": "5"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961543,
+      "name": "House Number",
+      "dataTypeName": "text",
+      "description": "Complaint house number",
+      "fieldName": "house_number",
+      "position": 6,
+      "renderTypeName": "text",
+      "tableColumnId": 144496295,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "UNKNWN",
+        "null": "0",
+        "top": [
+          {
+            "item": "20",
+            "count": "33061"
+          },
+          {
+            "item": "15",
+            "count": "32694"
+          },
+          {
+            "item": "30",
+            "count": "30156"
+          },
+          {
+            "item": "1",
+            "count": "29310"
+          },
+          {
+            "item": "55",
+            "count": "29212"
+          },
+          {
+            "item": "34",
+            "count": "28669"
+          },
+          {
+            "item": "10",
+            "count": "27923"
+          },
+          {
+            "item": "50",
+            "count": "27178"
+          },
+          {
+            "item": "2",
+            "count": "26100"
+          },
+          {
+            "item": "40",
+            "count": "26070"
+          },
+          {
+            "item": "150",
+            "count": "26000"
+          },
+          {
+            "item": "125",
+            "count": "25364"
+          },
+          {
+            "item": "100",
+            "count": "25258"
+          },
+          {
+            "item": "101",
+            "count": "24034"
+          },
+          {
+            "item": "25",
+            "count": "23819"
+          },
+          {
+            "item": "180",
+            "count": "23818"
+          },
+          {
+            "item": "115",
+            "count": "23562"
+          },
+          {
+            "item": "250",
+            "count": "23554"
+          },
+          {
+            "item": "120",
+            "count": "23487"
+          },
+          {
+            "item": "530",
+            "count": "23418"
+          }
+        ],
+        "smallest": "0",
+        "count": "14116350",
+        "cardinality": "23523"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961544,
+      "name": "Street Name",
+      "dataTypeName": "text",
+      "description": "Complaint street name",
+      "fieldName": "street_name",
+      "position": 7,
+      "renderTypeName": "text",
+      "tableColumnId": 144496289,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "ZULETTE AVENUE",
+        "null": "0",
+        "top": [
+          {
+            "item": "GRAND CONCOURSE",
+            "count": "224690"
+          },
+          {
+            "item": "BROADWAY",
+            "count": "156151"
+          },
+          {
+            "item": "OCEAN AVENUE",
+            "count": "127199"
+          },
+          {
+            "item": "ST NICHOLAS AVENUE",
+            "count": "101609"
+          },
+          {
+            "item": "MORRIS AVENUE",
+            "count": "101506"
+          },
+          {
+            "item": "UNIVERSITY AVENUE",
+            "count": "93428"
+          },
+          {
+            "item": "AMSTERDAM AVENUE",
+            "count": "90125"
+          },
+          {
+            "item": "WALTON AVENUE",
+            "count": "82015"
+          },
+          {
+            "item": "LINDEN BOULEVARD",
+            "count": "71091"
+          },
+          {
+            "item": "RIVERSIDE DRIVE",
+            "count": "67273"
+          },
+          {
+            "item": "EASTERN PARKWAY",
+            "count": "67095"
+          },
+          {
+            "item": "CRESTON AVENUE",
+            "count": "60100"
+          },
+          {
+            "item": "NOSTRAND AVENUE",
+            "count": "59640"
+          },
+          {
+            "item": "SHERIDAN AVENUE",
+            "count": "54742"
+          },
+          {
+            "item": "SEDGWICK AVENUE",
+            "count": "53940"
+          },
+          {
+            "item": "OCEAN PARKWAY",
+            "count": "53439"
+          },
+          {
+            "item": "NEW YORK AVENUE",
+            "count": "53065"
+          },
+          {
+            "item": "DECATUR AVENUE",
+            "count": "52064"
+          },
+          {
+            "item": "EAST 21 STREET",
+            "count": "52006"
+          },
+          {
+            "item": "BEDFORD AVENUE",
+            "count": "51473"
+          }
+        ],
+        "smallest": "0",
+        "count": "14116350",
+        "cardinality": "8022"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961545,
+      "name": "Post Code",
+      "dataTypeName": "text",
+      "description": "Complaint zip code",
+      "fieldName": "post_code",
+      "position": 8,
+      "renderTypeName": "text",
+      "tableColumnId": 144496287,
+      "cachedContents": {
+        "non_null": "14109390",
+        "largest": "3366",
+        "null": "6960",
+        "top": [
+          {
+            "item": "11226",
+            "count": "516637"
+          },
+          {
+            "item": "10458",
+            "count": "398159"
+          },
+          {
+            "item": "10467",
+            "count": "387408"
+          },
+          {
+            "item": "10457",
+            "count": "384321"
+          },
+          {
+            "item": "10453",
+            "count": "377716"
+          },
+          {
+            "item": "10452",
+            "count": "363228"
+          },
+          {
+            "item": "10468",
+            "count": "359178"
+          },
+          {
+            "item": "10456",
+            "count": "322889"
+          },
+          {
+            "item": "10031",
+            "count": "319203"
+          },
+          {
+            "item": "10032",
+            "count": "295382"
+          },
+          {
+            "item": "11213",
+            "count": "281733"
+          },
+          {
+            "item": "11225",
+            "count": "279918"
+          },
+          {
+            "item": "11207",
+            "count": "260062"
+          },
+          {
+            "item": "11221",
+            "count": "259284"
+          },
+          {
+            "item": "11233",
+            "count": "253836"
+          },
+          {
+            "item": "10460",
+            "count": "233130"
+          },
+          {
+            "item": "11212",
+            "count": "231507"
+          },
+          {
+            "item": "11216",
+            "count": "229120"
+          },
+          {
+            "item": "10472",
+            "count": "211466"
+          },
+          {
+            "item": "10033",
+            "count": "207987"
+          }
+        ],
+        "smallest": "0",
+        "count": "14116350",
+        "cardinality": "213"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961546,
+      "name": "Block",
+      "dataTypeName": "number",
+      "description": "\"Number assigned by DoF identifying the Tax  block the lot is on\"",
+      "fieldName": "block",
+      "position": 9,
+      "renderTypeName": "number",
+      "tableColumnId": 144496276,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "24000",
+        "null": "0",
+        "top": [
+          {
+            "item": "2174",
+            "count": "48144"
+          },
+          {
+            "item": "3143",
+            "count": "35978"
+          },
+          {
+            "item": "2136",
+            "count": "35644"
+          },
+          {
+            "item": "2170",
+            "count": "35227"
+          },
+          {
+            "item": "5026",
+            "count": "29671"
+          },
+          {
+            "item": "2137",
+            "count": "29228"
+          },
+          {
+            "item": "3304",
+            "count": "28676"
+          },
+          {
+            "item": "2180",
+            "count": "27982"
+          },
+          {
+            "item": "2456",
+            "count": "25622"
+          },
+          {
+            "item": "2142",
+            "count": "23739"
+          },
+          {
+            "item": "1918",
+            "count": "23723"
+          },
+          {
+            "item": "2215",
+            "count": "23348"
+          },
+          {
+            "item": "3249",
+            "count": "21619"
+          },
+          {
+            "item": "1988",
+            "count": "21222"
+          },
+          {
+            "item": "3328",
+            "count": "21132"
+          },
+          {
+            "item": "3326",
+            "count": "20886"
+          },
+          {
+            "item": "3250",
+            "count": "20809"
+          },
+          {
+            "item": "3324",
+            "count": "20729"
+          },
+          {
+            "item": "2139",
+            "count": "20456"
+          },
+          {
+            "item": "2867",
+            "count": "19954"
+          }
+        ],
+        "smallest": "0",
+        "count": "14116350",
+        "cardinality": "13018"
+      },
+      "format": {
+        "noCommas": "true"
+      }
+    },
+    {
+      "id": 575961547,
+      "name": "Lot",
+      "dataTypeName": "number",
+      "description": "\"Unique number assigned by DoF within a Block  identifying a lot\"",
+      "fieldName": "lot",
+      "position": 10,
+      "renderTypeName": "number",
+      "tableColumnId": 144496280,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "9999",
+        "null": "0",
+        "top": [
+          {
+            "item": "1",
+            "count": "1090026"
+          },
+          {
+            "item": "6",
+            "count": "244779"
+          },
+          {
+            "item": "10",
+            "count": "230811"
+          },
+          {
+            "item": "29",
+            "count": "222591"
+          },
+          {
+            "item": "40",
+            "count": "222056"
+          },
+          {
+            "item": "5",
+            "count": "217177"
+          },
+          {
+            "item": "7501",
+            "count": "212430"
+          },
+          {
+            "item": "11",
+            "count": "210751"
+          },
+          {
+            "item": "21",
+            "count": "209862"
+          },
+          {
+            "item": "7",
+            "count": "207606"
+          },
+          {
+            "item": "12",
+            "count": "207454"
+          },
+          {
+            "item": "26",
+            "count": "201435"
+          },
+          {
+            "item": "25",
+            "count": "196314"
+          },
+          {
+            "item": "20",
+            "count": "195730"
+          },
+          {
+            "item": "30",
+            "count": "186349"
+          },
+          {
+            "item": "22",
+            "count": "185372"
+          },
+          {
+            "item": "17",
+            "count": "185324"
+          },
+          {
+            "item": "8",
+            "count": "184074"
+          },
+          {
+            "item": "33",
+            "count": "183840"
+          },
+          {
+            "item": "18",
+            "count": "182333"
+          }
+        ],
+        "smallest": "0",
+        "count": "14116350",
+        "cardinality": "1114"
+      },
+      "format": {
+        "noCommas": "true"
+      }
+    },
+    {
+      "id": 575961548,
+      "name": "Apartment",
+      "dataTypeName": "text",
+      "description": "Number of the unit or apartment in a building",
+      "fieldName": "apartment",
+      "position": 11,
+      "renderTypeName": "text",
+      "tableColumnId": 144496303,
+      "cachedContents": {
+        "non_null": "14110900",
+        "largest": "ZZZ",
+        "null": "5450",
+        "top": [
+          {
+            "item": "BLDG",
+            "count": "1442970"
+          },
+          {
+            "item": "2",
+            "count": "508839"
+          },
+          {
+            "item": "1",
+            "count": "482435"
+          },
+          {
+            "item": "3",
+            "count": "268698"
+          },
+          {
+            "item": "1A",
+            "count": "227638"
+          },
+          {
+            "item": "2R",
+            "count": "205092"
+          },
+          {
+            "item": "2A",
+            "count": "201880"
+          },
+          {
+            "item": "1B",
+            "count": "201002"
+          },
+          {
+            "item": "2FL",
+            "count": "199809"
+          },
+          {
+            "item": "2B",
+            "count": "195968"
+          },
+          {
+            "item": "2F",
+            "count": "187226"
+          },
+          {
+            "item": "3A",
+            "count": "179882"
+          },
+          {
+            "item": "3B",
+            "count": "178024"
+          },
+          {
+            "item": "1R",
+            "count": "164962"
+          },
+          {
+            "item": "1FL",
+            "count": "162975"
+          },
+          {
+            "item": "4B",
+            "count": "154914"
+          },
+          {
+            "item": "3C",
+            "count": "151663"
+          },
+          {
+            "item": "4A",
+            "count": "148946"
+          },
+          {
+            "item": "1F",
+            "count": "148338"
+          },
+          {
+            "item": "2C",
+            "count": "146796"
+          }
+        ],
+        "smallest": "-",
+        "count": "14116350",
+        "cardinality": "30759"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961549,
+      "name": "Community Board",
+      "dataTypeName": "number",
+      "description": "\"Unique number identifying a Community  District/Board, which is a political geographical  area within a borough of the City of NY\"",
+      "fieldName": "community_board",
+      "position": 12,
+      "renderTypeName": "number",
+      "tableColumnId": 144496285,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "305",
+        "null": "0",
+        "top": [
+          {
+            "item": "12",
+            "count": "1675011"
+          },
+          {
+            "item": "4",
+            "count": "1386361"
+          },
+          {
+            "item": "9",
+            "count": "1371564"
+          },
+          {
+            "item": "5",
+            "count": "1248573"
+          },
+          {
+            "item": "7",
+            "count": "1172640"
+          },
+          {
+            "item": "3",
+            "count": "1070100"
+          },
+          {
+            "item": "8",
+            "count": "858201"
+          },
+          {
+            "item": "1",
+            "count": "757459"
+          },
+          {
+            "item": "10",
+            "count": "727598"
+          },
+          {
+            "item": "14",
+            "count": "695203"
+          },
+          {
+            "item": "11",
+            "count": "692935"
+          },
+          {
+            "item": "6",
+            "count": "653706"
+          },
+          {
+            "item": "2",
+            "count": "554686"
+          },
+          {
+            "item": "17",
+            "count": "546966"
+          },
+          {
+            "item": "16",
+            "count": "234142"
+          },
+          {
+            "item": "13",
+            "count": "184343"
+          },
+          {
+            "item": "15",
+            "count": "150084"
+          },
+          {
+            "item": "18",
+            "count": "133620"
+          },
+          {
+            "item": "0",
+            "count": "2774"
+          },
+          {
+            "item": "82",
+            "count": "130"
+          }
+        ],
+        "smallest": "0",
+        "count": "14116350",
+        "cardinality": "36"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961550,
+      "name": "Unit Type",
+      "dataTypeName": "text",
+      "description": "Type of space where the problem was reported ",
+      "fieldName": "unit_type",
+      "position": 13,
+      "renderTypeName": "text",
+      "tableColumnId": 144496301,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "PUBLIC PARTS",
+        "null": "0",
+        "top": [
+          {
+            "item": "APARTMENT",
+            "count": "10369711"
+          },
+          {
+            "item": "BUILDING",
+            "count": "1633127"
+          },
+          {
+            "item": "BUILDING-WIDE",
+            "count": "1339089"
+          },
+          {
+            "item": "PUBLIC AREA",
+            "count": "427623"
+          },
+          {
+            "item": "PUBLIC PARTS",
+            "count": "346796"
+          },
+          {
+            "item": "B-ROOM",
+            "count": "4"
+          }
+        ],
+        "smallest": "APARTMENT",
+        "count": "14116350",
+        "cardinality": "6"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961551,
+      "name": "Space Type",
+      "dataTypeName": "text",
+      "description": "Type of space where the problem was reported",
+      "fieldName": "space_type",
+      "position": 14,
+      "renderTypeName": "text",
+      "tableColumnId": 144496297,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "YARD",
+        "null": "0",
+        "top": [
+          {
+            "item": "ENTIRE APARTMENT",
+            "count": "4418520"
+          },
+          {
+            "item": "BATHROOM",
+            "count": "2081510"
+          },
+          {
+            "item": "ENTIRE BUILDING",
+            "count": "1626885"
+          },
+          {
+            "item": "KITCHEN",
+            "count": "1465886"
+          },
+          {
+            "item": "BUILDING-WIDE",
+            "count": "1335870"
+          },
+          {
+            "item": "BEDROOM",
+            "count": "947453"
+          },
+          {
+            "item": "LIVING ROOM",
+            "count": "603928"
+          },
+          {
+            "item": "ENTRANCE/FOYER",
+            "count": "192943"
+          },
+          {
+            "item": "BEDROOM 2",
+            "count": "150231"
+          },
+          {
+            "item": "OTHER ROOM/AREA",
+            "count": "134661"
+          },
+          {
+            "item": "ENTRANCE",
+            "count": "129048"
+          },
+          {
+            "item": "PUBLIC HALL",
+            "count": "113914"
+          },
+          {
+            "item": "BUILDING ENTRANCE",
+            "count": "107857"
+          },
+          {
+            "item": "LOBBY",
+            "count": "106020"
+          },
+          {
+            "item": "PRIVATE HALLWAY",
+            "count": "86340"
+          },
+          {
+            "item": "HALLWAY",
+            "count": "78671"
+          },
+          {
+            "item": "BASEMENT",
+            "count": "72696"
+          },
+          {
+            "item": "PRIVATE HALL",
+            "count": "58636"
+          },
+          {
+            "item": "OTHER",
+            "count": "54795"
+          },
+          {
+            "item": "FOYER",
+            "count": "44973"
+          }
+        ],
+        "smallest": "AIR INTAKE",
+        "count": "14116350",
+        "cardinality": "59"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961552,
+      "name": "Type",
+      "dataTypeName": "text",
+      "description": "Code indicating the problem type",
+      "fieldName": "type",
+      "position": 15,
+      "renderTypeName": "text",
+      "tableColumnId": 144496304,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "REFERRAL",
+        "null": "0",
+        "top": [
+          {
+            "item": "EMERGENCY",
+            "count": "9138674"
+          },
+          {
+            "item": "NON EMERGENCY",
+            "count": "4221446"
+          },
+          {
+            "item": "IMMEDIATE EMERGENCY",
+            "count": "475829"
+          },
+          {
+            "item": "HAZARDOUS",
+            "count": "280397"
+          },
+          {
+            "item": "REFERRAL",
+            "count": "4"
+          }
+        ],
+        "smallest": "EMERGENCY",
+        "count": "14116350",
+        "cardinality": "5"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961553,
+      "name": "Major Category",
+      "dataTypeName": "text",
+      "description": "The major category of the problem",
+      "fieldName": "major_category",
+      "position": 16,
+      "renderTypeName": "text",
+      "tableColumnId": 144496291,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "WATER LEAK",
+        "null": "0",
+        "top": [
+          {
+            "item": "HEATING",
+            "count": "2509671"
+          },
+          {
+            "item": "HEAT/HOT WATER",
+            "count": "2181925"
+          },
+          {
+            "item": "PLUMBING",
+            "count": "1855414"
+          },
+          {
+            "item": "GENERAL",
+            "count": "1718016"
+          },
+          {
+            "item": "PAINT/PLASTER",
+            "count": "1685720"
+          },
+          {
+            "item": "UNSANITARY CONDITION",
+            "count": "968038"
+          },
+          {
+            "item": "NONCONST",
+            "count": "775292"
+          },
+          {
+            "item": "ELECTRIC",
+            "count": "754047"
+          },
+          {
+            "item": "DOOR/WINDOW",
+            "count": "449559"
+          },
+          {
+            "item": "WATER LEAK",
+            "count": "376270"
+          },
+          {
+            "item": "APPLIANCE",
+            "count": "343140"
+          },
+          {
+            "item": "FLOORING/STAIRS",
+            "count": "280981"
+          },
+          {
+            "item": "SAFETY",
+            "count": "166241"
+          },
+          {
+            "item": "CONSTRUCTION",
+            "count": "18045"
+          },
+          {
+            "item": "OUTSIDE BUILDING",
+            "count": "17689"
+          },
+          {
+            "item": "ELEVATOR",
+            "count": "14631"
+          },
+          {
+            "item": "LINE OF TRAVEL",
+            "count": "1671"
+          }
+        ],
+        "smallest": "APPLIANCE",
+        "count": "14116350",
+        "cardinality": "17"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961554,
+      "name": "Minor Category",
+      "dataTypeName": "text",
+      "description": "The minor category of the problem",
+      "fieldName": "minor_category",
+      "position": 17,
+      "renderTypeName": "text",
+      "tableColumnId": 144496283,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "WIRING",
+        "null": "0",
+        "top": [
+          {
+            "item": "HEAT RELATED",
+            "count": "2476570"
+          },
+          {
+            "item": "ENTIRE BUILDING",
+            "count": "1421615"
+          },
+          {
+            "item": "WALL",
+            "count": "826544"
+          },
+          {
+            "item": "CEILING",
+            "count": "793760"
+          },
+          {
+            "item": "APARTMENT ONLY",
+            "count": "760310"
+          },
+          {
+            "item": "FLOOR",
+            "count": "557147"
+          },
+          {
+            "item": "MOLD",
+            "count": "542468"
+          },
+          {
+            "item": "VERMIN",
+            "count": "529820"
+          },
+          {
+            "item": "PESTS",
+            "count": "505911"
+          },
+          {
+            "item": "WATER-LEAKS",
+            "count": "481033"
+          },
+          {
+            "item": "BASIN/SINK",
+            "count": "392587"
+          },
+          {
+            "item": "WATER SUPPLY",
+            "count": "323184"
+          },
+          {
+            "item": "WINDOWS",
+            "count": "285060"
+          },
+          {
+            "item": "BATHTUB/SHOWER",
+            "count": "243959"
+          },
+          {
+            "item": "DOORS",
+            "count": "242107"
+          },
+          {
+            "item": "DOOR",
+            "count": "227187"
+          },
+          {
+            "item": "ELECTRIC/GAS RANGE",
+            "count": "200943"
+          },
+          {
+            "item": "TOILET",
+            "count": "185320"
+          },
+          {
+            "item": "CABINET",
+            "count": "184272"
+          },
+          {
+            "item": "RADIATOR",
+            "count": "179880"
+          }
+        ],
+        "smallest": "AIR-CONDITIONER",
+        "count": "14116350",
+        "cardinality": "91"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961555,
+      "name": "Problem Code",
+      "dataTypeName": "text",
+      "description": "The problem code",
+      "fieldName": "problem_code",
+      "position": 18,
+      "renderTypeName": "text",
+      "tableColumnId": 144496300,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "YARD OR COURT- TO WHAT DEGREE ?",
+        "null": "0",
+        "top": [
+          {
+            "item": "NO HEAT",
+            "count": "2690332"
+          },
+          {
+            "item": "NO HEAT& HOT WATER",
+            "count": "771288"
+          },
+          {
+            "item": "NO HOT WATER",
+            "count": "709018"
+          },
+          {
+            "item": "NO HEAT AND NO HOT WATER",
+            "count": "553790"
+          },
+          {
+            "item": "CHIPPED/PEELING/FLAKING",
+            "count": "445892"
+          },
+          {
+            "item": "BROKEN OR MISSING",
+            "count": "393817"
+          },
+          {
+            "item": "MICE",
+            "count": "372749"
+          },
+          {
+            "item": "AT WALL OR CEILING",
+            "count": "324353"
+          },
+          {
+            "item": "ROACHES",
+            "count": "303950"
+          },
+          {
+            "item": "N/A",
+            "count": "292748"
+          },
+          {
+            "item": "MOLD",
+            "count": "219593"
+          },
+          {
+            "item": "OTHER",
+            "count": "199591"
+          },
+          {
+            "item": "BROKEN OR DEFECTIVE",
+            "count": "198413"
+          },
+          {
+            "item": "HOLE",
+            "count": "190831"
+          },
+          {
+            "item": "COLLAPSING OR FALLING",
+            "count": "186970"
+          },
+          {
+            "item": "DIRTY OR UNSANITARY",
+            "count": "180077"
+          },
+          {
+            "item": "ACCUMULATION",
+            "count": "179234"
+          },
+          {
+            "item": "CONTINUOUS FROM ABOVE APT",
+            "count": "178659"
+          },
+          {
+            "item": "HOLE OR CRACKED",
+            "count": "173237"
+          },
+          {
+            "item": "BULGING/HOLE/CRACKED",
+            "count": "154134"
+          }
+        ],
+        "smallest": "ACCUMULATION",
+        "count": "14116350",
+        "cardinality": "437"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961556,
+      "name": "Complaint Status",
+      "dataTypeName": "text",
+      "description": "The status of the complaint",
+      "fieldName": "complaint_status",
+      "position": 19,
+      "renderTypeName": "text",
+      "tableColumnId": 144496299,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "OPEN",
+        "null": "0",
+        "top": [
+          {
+            "item": "CLOSE",
+            "count": "14043803"
+          },
+          {
+            "item": "OPEN",
+            "count": "72547"
+          }
+        ],
+        "smallest": "CLOSE",
+        "count": "14116350",
+        "cardinality": "2"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961557,
+      "name": "Complaint Status Date",
+      "dataTypeName": "calendar_date",
+      "description": "Date when the complaint status was updated",
+      "fieldName": "complaint_status_date",
+      "position": 20,
+      "renderTypeName": "calendar_date",
+      "tableColumnId": 144496277,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "2024-02-21T00:10:05.000",
+        "null": "0",
+        "top": [
+          {
+            "item": "2009-05-20T05:20:45.000",
+            "count": "528"
+          },
+          {
+            "item": "2011-06-14T05:21:07.000",
+            "count": "483"
+          },
+          {
+            "item": "2011-03-22T05:21:12.000",
+            "count": "482"
+          },
+          {
+            "item": "2010-04-27T05:20:56.000",
+            "count": "481"
+          },
+          {
+            "item": "2011-03-18T05:21:03.000",
+            "count": "481"
+          },
+          {
+            "item": "2011-10-19T05:20:36.000",
+            "count": "476"
+          },
+          {
+            "item": "2011-12-13T05:20:41.000",
+            "count": "473"
+          },
+          {
+            "item": "2011-11-29T05:20:40.000",
+            "count": "468"
+          },
+          {
+            "item": "2010-07-07T05:21:10.000",
+            "count": "466"
+          },
+          {
+            "item": "2011-04-19T05:21:13.000",
+            "count": "465"
+          },
+          {
+            "item": "2011-07-16T05:20:55.000",
+            "count": "461"
+          },
+          {
+            "item": "2010-04-09T05:20:59.000",
+            "count": "459"
+          },
+          {
+            "item": "2011-05-14T05:20:54.000",
+            "count": "459"
+          },
+          {
+            "item": "2011-06-01T05:21:08.000",
+            "count": "457"
+          },
+          {
+            "item": "2010-05-11T05:21:01.000",
+            "count": "455"
+          },
+          {
+            "item": "2011-11-15T05:20:36.000",
+            "count": "452"
+          },
+          {
+            "item": "2012-04-14T05:20:39.000",
+            "count": "451"
+          },
+          {
+            "item": "2011-11-04T05:20:40.000",
+            "count": "448"
+          },
+          {
+            "item": "2011-03-15T05:21:14.000",
+            "count": "447"
+          },
+          {
+            "item": "2011-03-01T05:21:25.000",
+            "count": "446"
+          }
+        ],
+        "smallest": "1999-11-22T12:06:13.000",
+        "count": "14116350",
+        "cardinality": "768550"
+      },
+      "format": {
+        "view": "date"
+      }
+    },
+    {
+      "id": 575961558,
+      "name": "Problem Status",
+      "dataTypeName": "text",
+      "description": "The status of the problem",
+      "fieldName": "problem_status",
+      "position": 21,
+      "renderTypeName": "text",
+      "tableColumnId": 144496293,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "OPEN",
+        "null": "0",
+        "top": [
+          {
+            "item": "CLOSE",
+            "count": "14061064"
+          },
+          {
+            "item": "OPEN",
+            "count": "55286"
+          }
+        ],
+        "smallest": "CLOSE",
+        "count": "14116350",
+        "cardinality": "2"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961559,
+      "name": "Problem Status Date",
+      "dataTypeName": "calendar_date",
+      "description": "Status description",
+      "fieldName": "problem_status_date",
+      "position": 22,
+      "renderTypeName": "calendar_date",
+      "tableColumnId": 144496281,
+      "cachedContents": {
+        "non_null": "14115713",
+        "largest": "2024-02-21T00:10:04.000",
+        "null": "637",
+        "top": [
+          {
+            "item": "2008-06-30T15:34:38.000",
+            "count": "30292"
+          },
+          {
+            "item": "2011-09-29T14:08:27.000",
+            "count": "3634"
+          },
+          {
+            "item": "2008-06-17T14:33:23.000",
+            "count": "3526"
+          },
+          {
+            "item": "2014-02-11T10:59:17.000",
+            "count": "1021"
+          },
+          {
+            "item": "2012-01-09T11:38:13.000",
+            "count": "992"
+          },
+          {
+            "item": "2022-04-05T00:00:00.000",
+            "count": "842"
+          },
+          {
+            "item": "2022-10-18T09:54:10.000",
+            "count": "525"
+          },
+          {
+            "item": "2014-02-03T12:16:50.000",
+            "count": "415"
+          },
+          {
+            "item": "2014-01-21T18:41:23.000",
+            "count": "363"
+          },
+          {
+            "item": "2006-10-30T10:20:08.000",
+            "count": "342"
+          },
+          {
+            "item": "2014-02-07T12:02:57.000",
+            "count": "298"
+          },
+          {
+            "item": "2018-10-24T18:56:33.000",
+            "count": "293"
+          },
+          {
+            "item": "2015-02-25T09:35:00.000",
+            "count": "268"
+          },
+          {
+            "item": "2017-11-28T02:07:20.000",
+            "count": "259"
+          },
+          {
+            "item": "2017-11-16T10:09:40.000",
+            "count": "244"
+          },
+          {
+            "item": "2018-03-28T21:52:41.000",
+            "count": "241"
+          },
+          {
+            "item": "2019-11-11T18:49:35.000",
+            "count": "239"
+          },
+          {
+            "item": "2019-02-20T02:09:53.000",
+            "count": "228"
+          },
+          {
+            "item": "2018-10-26T11:19:30.000",
+            "count": "198"
+          },
+          {
+            "item": "2013-12-16T12:24:10.000",
+            "count": "196"
+          }
+        ],
+        "smallest": "1999-11-22T12:06:13.000",
+        "count": "14116350",
+        "cardinality": "4226677"
+      },
+      "format": {
+        "view": "date"
+      }
+    },
+    {
+      "id": 575961560,
+      "name": "Status Description",
+      "dataTypeName": "text",
+      "description": "",
+      "fieldName": "status_description",
+      "position": 23,
+      "renderTypeName": "text",
+      "tableColumnId": 144496292,
+      "cachedContents": {
+        "non_null": "14116117",
+        "largest": "The following complaint conditions are still open. HPD may attempt to contact you to verify the correction of the condition or may conduct an inspection.",
+        "null": "233",
+        "top": [
+          {
+            "item": "The Department of Housing Preservation and Development inspected the following conditions. No violations were issued. The complaint has been closed.",
+            "count": "4361897"
+          },
+          {
+            "item": "The Department of Housing Preservation and Development inspected the following conditions. Violations were issued. Information about specific violations is available at www.nyc.gov/hpd",
+            "count": "2796611"
+          },
+          {
+            "item": "The Department of Housing Preservation and Development was not able to gain access to inspect the following conditions. The complaint has been closed. If the condition still exists, please file a new complaint.",
+            "count": "1967335"
+          },
+          {
+            "item": "More than one complaint was received for this building-wide condition. This complaint status is for the initial complaint.The Department of Housing Preservation and Development contacted an occupant of the apartment and verified that the following conditions were corrected. The complaint has been closed. If the condition still exists, please file a new complaint.",
+            "count": "1518342"
+          },
+          {
+            "item": "The Department of Housing Preservation and Development responded to a complaint of no heat or hot water and was advised by a tenant in the building that heat and hot water had been restored. If the condition still exists, please file a new complaint.",
+            "count": "830636"
+          },
+          {
+            "item": "More than one complaint was received for this building-wide condition. This complaint status is for the initial complaint.The Department of Housing Preservation and Development contacted a tenant in the building and verified that the following conditions were corrected. The complaint has been closed. If the condition still exists, please file a new complaint.",
+            "count": "753964"
+          },
+          {
+            "item": "The Department of Housing Preservation and Development contacted an occupant of the apartment and verified that the following conditions were corrected. The complaint has been closed. If the condition still exists, please file a new complaint.",
+            "count": "730285"
+          },
+          {
+            "item": "The Department of Housing Preservation and Development was not able to gain access to your apartment or others in the building to inspect for a lack of heat or hot water. The complaint has been closed. If the condition still exists, please file a new complaint.",
+            "count": "589316"
+          },
+          {
+            "item": "The Department of Housing Preservation and Development inspected the following conditions. Violations were previously issued for these conditions. Information about specific violations is available at www.nyc.gov/hpd.",
+            "count": "270163"
+          },
+          {
+            "item": "The Department of Housing Preservation and Development contacted a tenant in the building and verified that the following conditions were corrected. The complaint has been closed. If the condition still exists, please file a new complaint.",
+            "count": "127475"
+          },
+          {
+            "item": "The following complaint conditions are still open. HPD may attempt to contact you to verify the correction of the condition or may conduct an inspection.",
+            "count": "54524"
+          },
+          {
+            "item": "The Department of Housing Preservation and Development was unable to access the rooms where the following conditions were reported. No violations were issued. The complaint has been closed.",
+            "count": "32121"
+          },
+          {
+            "item": "The Department of Housing Preservation and Development was unable to access the rooms where the following  conditions were reported. No violations were issued. The complaint has been closed.",
+            "count": "25324"
+          },
+          {
+            "item": "The Department of Housing Preservation and Development responded to a complaint of no heat or hot water. Heat was not required at the time of the inspection. No violations were issued. If the condition still exists, please file a new complaint.",
+            "count": "24989"
+          },
+          {
+            "item": "The Department of Housing Preservation and Development was not able to gain access to your apartment to inspect for a lack of heat or hot water. However, HPD was able to verify that heat or hot water was inadequate by inspecting another apartment and a violation was issued. Information about specific violations is available at www.nyc.gov/hpd.",
+            "count": "23434"
+          },
+          {
+            "item": "The Department of Housing Preservation and Development was not able to gain access to inspect the conditions. If the conditions still exist and an inspection is required, please contact the borough office with your complaint number at",
+            "count": "5225"
+          },
+          {
+            "item": "More than one complaint was received for this building-wide condition. This complaint status is for the initial complaint.The following complaint conditions are still open. HPD may attempt to contact you to verify the correction of the condition or may conduct an inspection.",
+            "count": "1667"
+          },
+          {
+            "item": "The Department of Housing Preservation and Development inspected the following conditions. A Section 8 Failure was issued. Both the tenant and the property owner will receive a notice in the mail regarding the details of the Failure and the resulting action by the Agency.",
+            "count": "709"
+          },
+          {
+            "item": "More than one complaint was received for this building-wide condition.This complaint status is for the initial complaint.The Department of Housing Preservation and Development inspected the following conditions. No violations were issued. The complaint has been closed.",
+            "count": "361"
+          },
+          {
+            "item": "The Department of Housing Preservation and Development inspected the following conditions. Violations were issued. However, HPD also identified potential lead-based paint conditions and will attempt to contact you to schedule a follow-up inspection to test the paint for lead. Information about specific violations is available at www.nyc.gov/hpd.",
+            "count": "346"
+          }
+        ],
+        "smallest": "More than one complaint was received for this building-wide condition. This complaint status is for the initial complaint.The Department of Housing Preservation and Development contacted an occupant of the apartment and verified that the following conditions were corrected. The complaint has been closed. If the condition still exists, please file a new complaint.",
+        "count": "14116350",
+        "cardinality": "31"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961561,
+      "name": "Problem Duplicate Flag",
+      "dataTypeName": "text",
+      "description": "Duplicate complaint Indicator ",
+      "fieldName": "problem_duplicate_flag",
+      "position": 24,
+      "renderTypeName": "text",
+      "tableColumnId": 144496298,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "Y",
+        "null": "0",
+        "top": [
+          {
+            "item": "N",
+            "count": "11840863"
+          },
+          {
+            "item": "Y",
+            "count": "2275487"
+          }
+        ],
+        "smallest": "N",
+        "count": "14116350",
+        "cardinality": "2"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961562,
+      "name": "Complaint Anonymous Flag",
+      "dataTypeName": "text",
+      "description": "Anonymous complaint Indicator",
+      "fieldName": "complaint_anonymous_flag",
+      "position": 25,
+      "renderTypeName": "text",
+      "tableColumnId": 144496288,
+      "cachedContents": {
+        "non_null": "12663163",
+        "largest": "Y",
+        "null": "1453187",
+        "top": [
+          {
+            "item": "N",
+            "count": "11011718"
+          },
+          {
+            "item": "Y",
+            "count": "1651445"
+          }
+        ],
+        "smallest": "N",
+        "count": "14116350",
+        "cardinality": "2"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961563,
+      "name": "Unique Key",
+      "dataTypeName": "text",
+      "description": "Unique identifier of a Service Request (SR) in the open data set * Ties to 311",
+      "fieldName": "unique_key",
+      "position": 26,
+      "renderTypeName": "text",
+      "tableColumnId": 144496279,
+      "cachedContents": {
+        "non_null": "12300317",
+        "largest": "9999999",
+        "null": "1816033",
+        "top": [
+          {
+            "item": "10000001",
+            "count": "1"
+          },
+          {
+            "item": "10000002",
+            "count": "1"
+          },
+          {
+            "item": "10000003",
+            "count": "1"
+          },
+          {
+            "item": "10000004",
+            "count": "1"
+          },
+          {
+            "item": "10000005",
+            "count": "1"
+          },
+          {
+            "item": "10000006",
+            "count": "1"
+          },
+          {
+            "item": "10000007",
+            "count": "1"
+          },
+          {
+            "item": "10000008",
+            "count": "1"
+          },
+          {
+            "item": "10000009",
+            "count": "1"
+          },
+          {
+            "item": "10000010",
+            "count": "1"
+          },
+          {
+            "item": "10000011",
+            "count": "1"
+          },
+          {
+            "item": "10000012",
+            "count": "1"
+          },
+          {
+            "item": "10000013",
+            "count": "1"
+          },
+          {
+            "item": "10000014",
+            "count": "1"
+          },
+          {
+            "item": "10000015",
+            "count": "1"
+          },
+          {
+            "item": "10000016",
+            "count": "1"
+          },
+          {
+            "item": "10000017",
+            "count": "1"
+          },
+          {
+            "item": "10000018",
+            "count": "1"
+          },
+          {
+            "item": "10000019",
+            "count": "1"
+          },
+          {
+            "item": "10000020",
+            "count": "1"
+          }
+        ],
+        "smallest": "10000000",
+        "count": "14116350",
+        "cardinality": "12300317"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961564,
+      "name": "Latitude",
+      "dataTypeName": "number",
+      "description": "",
+      "fieldName": "latitude",
+      "position": 27,
+      "renderTypeName": "number",
+      "tableColumnId": 144496273,
+      "cachedContents": {
+        "non_null": "14111626",
+        "largest": "40.912869000000001",
+        "null": "4724",
+        "top": [
+          {
+            "item": "40.854438999999999",
+            "count": "21705"
+          },
+          {
+            "item": "40.861938000000002",
+            "count": "16894"
+          },
+          {
+            "item": "40.747421000000003",
+            "count": "14301"
+          },
+          {
+            "item": "40.831527000000001",
+            "count": "12155"
+          },
+          {
+            "item": "40.824595000000002",
+            "count": "11555"
+          },
+          {
+            "item": "40.638570999999999",
+            "count": "11457"
+          },
+          {
+            "item": "40.822893000000001",
+            "count": "10414"
+          },
+          {
+            "item": "40.744086000000003",
+            "count": "9504"
+          },
+          {
+            "item": "40.852670000000003",
+            "count": "8329"
+          },
+          {
+            "item": "40.832613000000002",
+            "count": "8121"
+          },
+          {
+            "item": "40.679338000000001",
+            "count": "8044"
+          },
+          {
+            "item": "40.744999",
+            "count": "7992"
+          },
+          {
+            "item": "40.652594999999998",
+            "count": "7843"
+          },
+          {
+            "item": "40.834676000000002",
+            "count": "7830"
+          },
+          {
+            "item": "40.616371000000001",
+            "count": "7656"
+          },
+          {
+            "item": "40.884337000000002",
+            "count": "7623"
+          },
+          {
+            "item": "40.850794999999998",
+            "count": "7173"
+          },
+          {
+            "item": "40.764684000000003",
+            "count": "7076"
+          },
+          {
+            "item": "40.847808999999998",
+            "count": "6602"
+          },
+          {
+            "item": "40.840837999999998",
+            "count": "6598"
+          }
+        ],
+        "smallest": "40.499339999999997",
+        "count": "14116350",
+        "cardinality": "162897"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961565,
+      "name": "Longitude",
+      "dataTypeName": "number",
+      "description": "",
+      "fieldName": "longitude",
+      "position": 28,
+      "renderTypeName": "number",
+      "tableColumnId": 144496278,
+      "cachedContents": {
+        "non_null": "14111626",
+        "largest": "-73.700743000000003",
+        "null": "4724",
+        "top": [
+          {
+            "item": "-73.898422999999994",
+            "count": "21735"
+          },
+          {
+            "item": "-73.927145999999993",
+            "count": "17002"
+          },
+          {
+            "item": "-73.876852999999997",
+            "count": "14311"
+          },
+          {
+            "item": "-73.928863000000007",
+            "count": "12135"
+          },
+          {
+            "item": "-73.877298999999994",
+            "count": "11555"
+          },
+          {
+            "item": "-73.949005",
+            "count": "11465"
+          },
+          {
+            "item": "-73.924651999999995",
+            "count": "10485"
+          },
+          {
+            "item": "-73.978188000000003",
+            "count": "9503"
+          },
+          {
+            "item": "-73.904675999999995",
+            "count": "8140"
+          },
+          {
+            "item": "-73.930374",
+            "count": "8036"
+          },
+          {
+            "item": "-73.892967999999996",
+            "count": "7972"
+          },
+          {
+            "item": "-73.930268999999996",
+            "count": "7828"
+          },
+          {
+            "item": "-74.038267000000005",
+            "count": "7655"
+          },
+          {
+            "item": "-73.897524000000004",
+            "count": "7623"
+          },
+          {
+            "item": "-73.866536999999994",
+            "count": "7176"
+          },
+          {
+            "item": "-73.927183999999997",
+            "count": "7112"
+          },
+          {
+            "item": "-73.950832000000005",
+            "count": "6763"
+          },
+          {
+            "item": "-73.827481000000006",
+            "count": "6600"
+          },
+          {
+            "item": "-73.910308999999998",
+            "count": "6598"
+          },
+          {
+            "item": "-73.885897",
+            "count": "6173"
+          }
+        ],
+        "smallest": "-74.253146999999998",
+        "count": "14116350",
+        "cardinality": "162076"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961566,
+      "name": "Council District",
+      "dataTypeName": "number",
+      "description": "",
+      "fieldName": "council_district",
+      "position": 30,
+      "renderTypeName": "number",
+      "tableColumnId": 144496284,
+      "cachedContents": {
+        "non_null": "14111626",
+        "largest": "51",
+        "null": "4724",
+        "top": [
+          {
+            "item": "15",
+            "count": "785530"
+          },
+          {
+            "item": "14",
+            "count": "784255"
+          },
+          {
+            "item": "10",
+            "count": "760424"
+          },
+          {
+            "item": "16",
+            "count": "700093"
+          },
+          {
+            "item": "40",
+            "count": "690951"
+          },
+          {
+            "item": "9",
+            "count": "608102"
+          },
+          {
+            "item": "17",
+            "count": "569210"
+          },
+          {
+            "item": "7",
+            "count": "540681"
+          },
+          {
+            "item": "36",
+            "count": "532587"
+          },
+          {
+            "item": "41",
+            "count": "508716"
+          },
+          {
+            "item": "11",
+            "count": "474958"
+          },
+          {
+            "item": "35",
+            "count": "444703"
+          },
+          {
+            "item": "37",
+            "count": "441712"
+          },
+          {
+            "item": "8",
+            "count": "382143"
+          },
+          {
+            "item": "45",
+            "count": "367594"
+          },
+          {
+            "item": "42",
+            "count": "335848"
+          },
+          {
+            "item": "18",
+            "count": "334881"
+          },
+          {
+            "item": "34",
+            "count": "297227"
+          },
+          {
+            "item": "12",
+            "count": "288953"
+          },
+          {
+            "item": "13",
+            "count": "236886"
+          }
+        ],
+        "smallest": "1",
+        "count": "14116350",
+        "cardinality": "51"
+      },
+      "format": {}
+    },
+    {
+      "id": 575961567,
+      "name": "Census Tract",
+      "dataTypeName": "number",
+      "description": "",
+      "fieldName": "census_tract",
+      "position": 31,
+      "renderTypeName": "number",
+      "tableColumnId": 144496286,
+      "cachedContents": {
+        "non_null": "14111626",
+        "largest": "157903",
+        "null": "4724",
+        "top": [
+          {
+            "item": "225",
+            "count": "102758"
+          },
+          {
+            "item": "279",
+            "count": "101781"
+          },
+          {
+            "item": "245",
+            "count": "99337"
+          },
+          {
+            "item": "253",
+            "count": "84574"
+          },
+          {
+            "item": "291",
+            "count": "81159"
+          },
+          {
+            "item": "261",
+            "count": "79677"
+          },
+          {
+            "item": "189",
+            "count": "78671"
+          },
+          {
+            "item": "263",
+            "count": "77989"
+          },
+          {
+            "item": "241",
+            "count": "76692"
+          },
+          {
+            "item": "265",
+            "count": "74302"
+          },
+          {
+            "item": "195",
+            "count": "72360"
+          },
+          {
+            "item": "285",
+            "count": "71207"
+          },
+          {
+            "item": "269",
+            "count": "69515"
+          },
+          {
+            "item": "251",
+            "count": "66884"
+          },
+          {
+            "item": "228",
+            "count": "66196"
+          },
+          {
+            "item": "277",
+            "count": "59156"
+          },
+          {
+            "item": "193",
+            "count": "58427"
+          },
+          {
+            "item": "233",
+            "count": "58028"
+          },
+          {
+            "item": "247",
+            "count": "56774"
+          },
+          {
+            "item": "293",
+            "count": "56255"
+          }
+        ],
+        "smallest": "1",
+        "count": "14116350",
+        "cardinality": "1488"
+      },
+      "format": {
+        "noCommas": "true"
+      }
+    },
+    {
+      "id": 575961568,
+      "name": "BIN",
+      "dataTypeName": "number",
+      "description": "",
+      "fieldName": "bin",
+      "position": 32,
+      "renderTypeName": "number",
+      "tableColumnId": 144496275,
+      "cachedContents": {
+        "non_null": "14085040",
+        "largest": "5799518",
+        "null": "31310",
+        "top": [
+          {
+            "item": "2013317",
+            "count": "21654"
+          },
+          {
+            "item": "1064197",
+            "count": "16894"
+          },
+          {
+            "item": "4431449",
+            "count": "14292"
+          },
+          {
+            "item": "3000000",
+            "count": "12722"
+          },
+          {
+            "item": "2003187",
+            "count": "12123"
+          },
+          {
+            "item": "2023480",
+            "count": "11555"
+          },
+          {
+            "item": "3120543",
+            "count": "11413"
+          },
+          {
+            "item": "2002784",
+            "count": "10414"
+          },
+          {
+            "item": "1020083",
+            "count": "9503"
+          },
+          {
+            "item": "2000000",
+            "count": "9121"
+          },
+          {
+            "item": "1000000",
+            "count": "8170"
+          },
+          {
+            "item": "2004223",
+            "count": "8120"
+          },
+          {
+            "item": "3325183",
+            "count": "8034"
+          },
+          {
+            "item": "4030658",
+            "count": "7972"
+          },
+          {
+            "item": "2003497",
+            "count": "7828"
+          },
+          {
+            "item": "3155701",
+            "count": "7655"
+          },
+          {
+            "item": "2016000",
+            "count": "7623"
+          },
+          {
+            "item": "2048777",
+            "count": "7173"
+          },
+          {
+            "item": "4007109",
+            "count": "7076"
+          },
+          {
+            "item": "3344031",
+            "count": "6739"
+          }
+        ],
+        "smallest": "1000000",
+        "count": "14116350",
+        "cardinality": "244647"
+      },
+      "format": {
+        "noCommas": "true"
+      }
+    },
+    {
+      "id": 575961569,
+      "name": "BBL",
+      "dataTypeName": "number",
+      "description": "",
+      "fieldName": "bbl",
+      "position": 33,
+      "renderTypeName": "number",
+      "tableColumnId": 144496290,
+      "cachedContents": {
+        "non_null": "14116350",
+        "largest": "25212128",
+        "null": "0",
+        "top": [
+          {
+            "item": "2821852",
+            "count": "1"
+          },
+          {
+            "item": "2821853",
+            "count": "1"
+          },
+          {
+            "item": "2821855",
+            "count": "1"
+          },
+          {
+            "item": "2821856",
+            "count": "1"
+          },
+          {
+            "item": "2821857",
+            "count": "1"
+          },
+          {
+            "item": "2821858",
+            "count": "1"
+          },
+          {
+            "item": "2821860",
+            "count": "1"
+          },
+          {
+            "item": "2821861",
+            "count": "1"
+          },
+          {
+            "item": "2821862",
+            "count": "1"
+          },
+          {
+            "item": "2821864",
+            "count": "1"
+          },
+          {
+            "item": "2821865",
+            "count": "1"
+          },
+          {
+            "item": "2821866",
+            "count": "1"
+          },
+          {
+            "item": "2821867",
+            "count": "1"
+          },
+          {
+            "item": "2821868",
+            "count": "1"
+          },
+          {
+            "item": "2821869",
+            "count": "1"
+          },
+          {
+            "item": "2821870",
+            "count": "1"
+          },
+          {
+            "item": "2821871",
+            "count": "1"
+          },
+          {
+            "item": "2821873",
+            "count": "1"
+          },
+          {
+            "item": "2821874",
+            "count": "1"
+          },
+          {
+            "item": "2821875",
+            "count": "1"
+          }
+        ],
+        "smallest": "2821851",
+        "count": "14116350",
+        "cardinality": "14116350"
+      },
+      "format": {
+        "noCommas": "true"
+      }
+    },
+    {
+      "id": 575961570,
+      "name": "NTA",
+      "dataTypeName": "text",
+      "description": "",
+      "fieldName": "nta",
+      "position": 34,
+      "renderTypeName": "text",
+      "tableColumnId": 144496282,
+      "cachedContents": {
+        "non_null": "14111626",
+        "largest": "Yankee Stadium-Macombs Dam Park",
+        "null": "4724",
+        "top": [
+          {
+            "item": "Washington Heights (South)",
+            "count": "364335"
+          },
+          {
+            "item": "Crown Heights (North)",
+            "count": "352937"
+          },
+          {
+            "item": "Flatbush",
+            "count": "342796"
+          },
+          {
+            "item": "Concourse-Concourse Village",
+            "count": "327907"
+          },
+          {
+            "item": "Washington Heights (North)",
+            "count": "323055"
+          },
+          {
+            "item": "Hamilton Heights-Sugar Hill",
+            "count": "292946"
+          },
+          {
+            "item": "Harlem (North)",
+            "count": "285581"
+          },
+          {
+            "item": "Bedford-Stuyvesant (East)",
+            "count": "267749"
+          },
+          {
+            "item": "Mount Hope",
+            "count": "258659"
+          },
+          {
+            "item": "Bedford Park",
+            "count": "254581"
+          },
+          {
+            "item": "Soundview-Bruckner-Bronx River",
+            "count": "238719"
+          },
+          {
+            "item": "Crown Heights (South)",
+            "count": "234976"
+          },
+          {
+            "item": "East Flatbush-Erasmus",
+            "count": "231826"
+          },
+          {
+            "item": "Mount Eden-Claremont (West)",
+            "count": "224175"
+          },
+          {
+            "item": "University Heights (South)-Morris Heights",
+            "count": "222142"
+          },
+          {
+            "item": "University Heights (North)-Fordham",
+            "count": "211952"
+          },
+          {
+            "item": "Prospect Lefferts Gardens-Wingate",
+            "count": "198065"
+          },
+          {
+            "item": "Williamsbridge-Olinville",
+            "count": "196179"
+          },
+          {
+            "item": "Fordham Heights",
+            "count": "194343"
+          },
+          {
+            "item": "Bedford-Stuyvesant (West)",
+            "count": "193025"
+          }
+        ],
+        "smallest": "Allerton",
+        "count": "14116350",
+        "cardinality": "230"
+      },
+      "format": {}
+    }
+  ],
+  "grants": [
+    {
+      "inherited": false,
+      "type": "viewer",
+      "flags": [
+        "public"
+      ]
+    }
+  ],
+  "metadata": {
+    "rdfSubject": "0",
+    "rdfClass": "",
+    "attachments": [
+      {
+        "filename": "Housing_Maintenance_Code_Complaints_and_Problems_Data_Dictionary.xlsx",
+        "assetId": "fe5092e0-bf34-403b-90f5-8322d2c7dfcd",
+        "name": "Housing_Maintenance_Code_Complaints_and_Problems_Data_Dictionary.xlsx"
+      }
+    ],
+    "custom_fields": {
+      "Update": {
+        "Automation": "Yes",
+        "Date Made Public": "8/7/2023",
+        "Update Frequency": "Daily",
+        "Data Change Frequency": "Daily"
+      },
+      "Dataset Information": {
+        "Agency": "Department of Housing Preservation and Development (HPD)"
+      }
+    },
+    "rowIdentifier": 575961539,
+    "rowLabel": "problem reported by the complainant",
+    "availableDisplayTypes": [
+      "table",
+      "fatrow",
+      "page"
+    ]
+  },
+  "owner": {
+    "id": "5fuc-pqz2",
+    "displayName": "NYC OpenData",
+    "profileImageUrlLarge": "/api/users/5fuc-pqz2/profile_images/LARGE",
+    "profileImageUrlMedium": "/api/users/5fuc-pqz2/profile_images/THUMB",
+    "profileImageUrlSmall": "/api/users/5fuc-pqz2/profile_images/TINY",
+    "screenName": "NYC OpenData",
+    "type": "interactive",
+    "flags": [
+      "acceptedEula",
+      "mayBeStoriesCoOwner"
+    ]
+  },
+  "query": {},
+  "rights": [
+    "read"
+  ],
+  "tableAuthor": {
+    "id": "5fuc-pqz2",
+    "displayName": "NYC OpenData",
+    "profileImageUrlLarge": "/api/users/5fuc-pqz2/profile_images/LARGE",
+    "profileImageUrlMedium": "/api/users/5fuc-pqz2/profile_images/THUMB",
+    "profileImageUrlSmall": "/api/users/5fuc-pqz2/profile_images/TINY",
+    "screenName": "NYC OpenData",
+    "type": "interactive",
+    "flags": [
+      "acceptedEula",
+      "mayBeStoriesCoOwner"
+    ]
+  },
+  "tags": [
+    "housing; maintenance code; mc; complaint problems; hpd"
+  ],
+  "flags": [
+    "default",
+    "ownerMayBeContacted",
+    "restorable",
+    "restorePossibleForType"
+  ]
+}

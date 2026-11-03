@@ -1,0 +1,205 @@
+{
+  "research_questions": [
+    {
+      "id": "rq1",
+      "member": "Member 1 · Takiee-Allah (16001345)",
+      "question": "Are neighborhoods with denser street construction also the neighborhoods with denser housing maintenance problems?",
+      "why": "If the same places carry both burdens, city agencies could coordinate street work and housing inspections there.",
+      "method": "Totals per neighborhood for 2022-2025, divided by land area and years (per km2 per year). Spearman rank correlation across all residential neighborhoods, then again inside each borough to remove the borough-level confounder.",
+      "chart": "Log-log scatter (one dot per neighborhood, coloured by borough): both densities span several orders of magnitude, so log axes show the spread honestly.",
+      "answer": "Yes, strongly at city level: Spearman ρ = 0.65 across 197 residential neighborhoods (p < 0.001). The places with the most street permits per km² are also the places with the most housing problems per km². The within-borough picture is the real discovery, though. The link is strong in the Bronx (ρ = 0.82), Queens (0.77) and Staten Island (0.65), weak in Brooklyn (0.19), and **reversed in Manhattan (ρ = −0.78)**. Manhattan's most permit-dense areas are commercial cores like Midtown–Times Square (about 7,500 permits/km²/yr) with few tenants filing complaints (about 500 problems/km²/yr). Its complaint hot-spots, Harlem, Hamilton Heights and Washington Heights (about 9,000–10,000 problems/km²/yr), have only about 1,500 permits/km²/yr.",
+      "limits": "Both densities are driven by how built-up and residential a place is, which is a shared cause and not one causing the other. Density per km² ignores population and the number of housing units, because no population table was joined."
+    },
+    {
+      "id": "rq2",
+      "member": "Member 1 · Takiee-Allah (16001345)",
+      "question": "Do the two domains peak in the same months of the year, or in opposite seasons?",
+      "why": "Timing matters for staffing: if streets are busiest when complaints are lowest, inspectors and crews compete less for the same months.",
+      "method": "City-wide monthly totals, each turned into an index (average month = 100) so both fit on one axis. Month-of-year averages identify each peak and low.",
+      "chart": "Two-line time series on a shared index scale with the legal heat season (Oct-May) shaded. A shared index avoids the misleading dual-axis effect.",
+      "answer": "They peak in different seasons. Housing problems peak in **December–January** (index about 155 and 152, average month = 100) and bottom out in **June** (66). The swing is driven by heat/hot-water complaints, which are about 15× higher in December than in August. Street permits are much flatter (73–123) and peak in **March** and June, with their low in **February**. Month to month, the two series are slightly negatively related (ρ = −0.28, p = 0.05). Street crews and housing inspectors are busiest at different times of the year.",
+      "limits": "This is city-wide, so it says nothing about any single neighborhood. Permits measure permission to work, not the days work actually happened."
+    },
+    {
+      "id": "rq3",
+      "member": "Member 2 · Kirolous Bassem (16002081)",
+      "question": "On the SAME street, are heat and gas complaints higher in months when the street has gas-main work than in months when it does not?",
+      "why": "Gas work can mean gas service shut-offs, which can take away heat, hot water and cooking gas from the buildings on that street.",
+      "method": "Street x month table (street names normalized identically in both datasets). Paired comparison: for every street that had months with AND without gas permits, compare its own average complaints in both kinds of months, separately for heat season and summer. Wilcoxon signed-rank test.",
+      "chart": "Grouped bar chart (with vs without gas work, per season): a direct visual of a paired before/after-style comparison.",
+      "answer": "**No.** In 4,505 streets compared with themselves during heat season, heat + gas complaints averaged 6.61 per street-month in months **with** gas-main permits and 6.91 in months **without**, slightly *lower* with work (ratio 0.96). In summer (3,962 streets) it was 1.20 vs 1.20, no difference. The simple story that gas work cuts off heat and causes complaints is not visible at street-month level.",
+      "limits": "Street names are matched by name, so a long avenue such as Broadway is one \"street\" across many neighborhoods. A permit does not say whether service was actually shut off. Very short outages may be fixed before tenants complain to HPD."
+    },
+    {
+      "id": "rq4",
+      "member": "Member 2 · Kirolous Bassem (16002081)",
+      "question": "Does utility street work come BEFORE matching indoor problems (0-3 months later) in the same neighborhood?",
+      "why": "A lead-lag pattern would let HPD anticipate complaint spikes from permits that DOT has already issued.",
+      "method": "For 4 work-to-problem pairs and lags 0-3 months: remove each neighborhood average and each month average (two-way demeaning), then Spearman correlation. Fisher 95% confidence intervals.",
+      "chart": "Grouped bar chart of correlation by lag with 95% error bars: shows size, direction and uncertainty together.",
+      "answer": "**No timing link.** After removing each neighborhood's own average and each month's city-wide average, every one of the 16 tested correlations (4 work→problem pairs × lags 0–3 months) lies between −0.022 and +0.015. All of them are practically zero, and 15 of 16 are not statistically significant. Unusual utility work in a neighborhood is not followed by unusual matching complaints there.",
+      "limits": "Monthly granularity could hide effects that last only days. Neighborhoods average many streets, so a very local effect could be diluted. A null result means \"no detectable effect at this scale\", not \"proven zero\"."
+    },
+    {
+      "id": "rq5",
+      "member": "Member 3 · Ziad Khaled Saber Abdullah (17006438)",
+      "question": "Which neighborhoods carry a \"double burden\": top quartile for BOTH housing problems and street work per km2?",
+      "why": "These are the places where residents live with both indoor housing problems and outdoor street disruption. That makes them candidates for coordinated action.",
+      "method": "Neighborhood densities for 2022-2025. Each neighborhood is classed by whether it is in the top 25% for H6, for T3, for both, or for neither. The number of \"both\" is compared with what independence would give (25% x 25%).",
+      "chart": "Choropleth map of the four classes: geography is the point of the question.",
+      "answer": "**18 neighborhoods carry a double burden** (top quartile for both housing problems and street permits per km²). If the two were unrelated we would expect about 12, so overlap is about 1.5× chance. They are concentrated in the West/Central Bronx (Fordham Heights, Mount Hope, Mount Eden-Claremont, Concourse, University Heights, West Farms), Upper Manhattan (Harlem South, Inwood and others) and a few Brooklyn areas. On the map these form two connected clusters around the Harlem River.",
+      "limits": "Quartile cut-offs are a choice: a different threshold changes the count but not the clusters. Density is per area, not per resident."
+    },
+    {
+      "id": "rq6",
+      "member": "Member 3 · Ziad Khaled Saber Abdullah (17006438)",
+      "question": "How many housing problems are reported per street permit, by borough and month of year?",
+      "why": "The ratio shows where and when housing distress outweighs street activity, i.e. where the housing side of the story dominates.",
+      "method": "Borough x month totals (including permits that could not be placed in a neighborhood), pooled over 2022-2025, ratio H6 problems / T3 permits.",
+      "chart": "Annotated heatmap (borough x month): two categorical axes plus one value is exactly what a heatmap is for.",
+      "answer": "The ratio is highest in the **Bronx in winter**: 6.6 housing problems per street permit in January, against 1.9 in June. It is lowest on **Staten Island** (0.16–0.57). Every borough follows the same winter-high, summer-low pattern, because complaints swing with the heat season while permits stay flat (RQ2). The Bronx ratio is about 3× Brooklyn and about 3.5× Manhattan in every month. There, housing distress outweighs street activity far more than anywhere else.",
+      "limits": "The ratio mixes two different things (complaints and permissions), so it is a comparison index, not a rate. It is pooled over four years."
+    },
+    {
+      "id": "rq7",
+      "member": "Member 4 · Ahmed Hany (16004257)",
+      "question": "Are housing complaints closed more slowly in neighborhood-months with heavy street work?",
+      "why": "Street work may make buildings harder to reach or repairs harder to finish (e.g. waiting for utilities).",
+      "method": "Neighborhood-months with at least 5 problems. Street-work intensity = quartile of permit density compared with the same borough in the same month (z-score), so busy boroughs and seasons do not drive the tiers. Kruskal-Wallis test and Spearman correlation.",
+      "chart": "Box plot by intensity quartile: compares whole distributions of a skewed variable, not just means.",
+      "answer": "**Practically no.** The tiers differ statistically (Kruskal–Wallis p = 0.001, n = 9,399 neighborhood-months), but the size is tiny: the median time to close is 4.63 days in the lowest street-work quartile and 4.84 days in the highest. That is about 5 hours, and the correlation is ρ = 0.03. With 9,000+ observations even meaningless differences become \"significant\". Effect size is what matters here.",
+      "limits": "The value is the median per neighborhood-month, not per complaint. Closing a complaint depends mostly on landlords and HPD workload, which we do not observe."
+    },
+    {
+      "id": "rq8",
+      "member": "Member 4 · Ahmed Hany (16004257)",
+      "question": "Which 15 neighborhoods are under the most combined pressure relative to their own borough?",
+      "why": "A ranked shortlist is directly actionable for agencies with limited inspectors.",
+      "method": "Within-borough z-scores of log housing density and log permit density. The stress index is the average of the two.",
+      "chart": "Horizontal grouped bar chart: long neighborhood names stay readable and both components stay visible.",
+      "answer": "Relative to their own borough, the most pressured neighborhoods are **Astoria (Central)** and **Old Astoria-Hallets Point** in Queens, **Mount Hope** and **Fordham Heights** in the Bronx, and **St. George-New Brighton** and **Tompkinsville-Stapleton** on Staten Island, followed by **Corona** (Queens). Using within-borough z-scores surfaces places a city-wide ranking would hide: Staten Island's North Shore is unremarkable city-wide but stands out strongly inside its borough.",
+      "limits": "The index weighs both sides equally. Long Island City reaches the top 15 almost only through street work (housing z below 0), so always read both bars and not just the rank."
+    },
+    {
+      "id": "rq9",
+      "member": "Member 5 · Abdallah Ahmed Mohamed (16004141)",
+      "question": "Is the MIX of street work different in the neighborhoods with the most heat/hot-water complaints?",
+      "why": "If high-heat-complaint areas have more gas or steam work, utility infrastructure could be a shared underlying factor.",
+      "method": "Neighborhoods split into 5 equal groups (quintiles) by heat complaints per km2. For each group: share of permits by work kind.",
+      "chart": "100% stacked bars: compares composition across groups.",
+      "answer": "Yes. The mix shifts from utility work to **building operations**. In the 20% of neighborhoods with the fewest heat complaints per km², building-operation permits are 18% of all street permits. In the 20% with the most, they are **48%**. Over the same range, gas work falls from 12% to 8%, water/sewer from 5% to 3%, paving from 8% to 4% and sidewalk work from 11% to 7%. High-heat-complaint areas are dense residential areas full of building-side work (scaffolds, sheds, renovations), not areas with unusually much gas or steam work.",
+      "limits": "Work kinds are our grouping of DOT permit types (documented in notebook 01). Shares hide volume: dense neighborhoods have more of every kind in absolute terms."
+    },
+    {
+      "id": "rq10",
+      "member": "Member 5 · Abdallah Ahmed Mohamed (16004141)",
+      "question": "Did neighborhoods where street work grew the most (first vs last year) also see housing complaints grow?",
+      "why": "Change-on-change removes everything that is constant about a neighborhood (size, building age, density). That is a stronger test than comparing levels.",
+      "method": "Percent change from the first to the last full year for both domains, for neighborhoods with a stable baseline (at least 50 problems and 20 permits in the first year). Spearman correlation and a quadrant count.",
+      "chart": "Scatter with quadrant lines at 0%: each quadrant has a plain meaning (both grew, both fell, ...).",
+      "answer": "**No.** Across 196 neighborhoods, the change in street permits from 2022 to 2025 is unrelated to the change in housing problems (ρ = −0.01, p = 0.91). Housing problems grew city-wide (+17%, from 732k to 854k), so most neighborhoods sit above zero whatever happened to their street work. Of the 108 neighborhoods where permits grew, 78 saw complaints grow. Of the 88 where permits fell, 60 still saw complaints grow. That is almost the same share.",
+      "limits": "A change between two years is noisy for small neighborhoods. A 4-year window may be too short for slower effects such as new construction attracting new residents."
+    },
+    {
+      "id": "rq11",
+      "member": "Member 6 · Mohamed Ahmed (16008868)",
+      "question": "Which housing metrics move together with which street metrics across neighborhoods?",
+      "why": "A full matrix shows the whole picture at once and guards against cherry-picking one pair.",
+      "method": "12 neighborhood-level metrics (6 per domain). Spearman correlation matrix. The cross-domain block is outlined.",
+      "chart": "Annotated diverging heatmap (-1 to +1): the standard and clearest way to show a correlation matrix.",
+      "answer": "The strongest cross-domain link is simple density: housing problems/km² vs permits/km² (ρ = 0.65) and vs street openings/km² (0.60). Neighborhoods with dense housing complaints also have a *lower* share of utility (−0.46), emergency (−0.35) and new-job (−0.48) permits. Their street activity is more routine and more renewal-heavy. Inside H6, dense-complaint areas have higher violation rates (0.50) and fewer \"no access\" inspections (−0.57). Complaints there are more often confirmed, so they reflect real conditions and not just more reporting.",
+      "limits": "These are correlations between 197 neighborhoods (an ecological analysis). They describe places, not individual buildings or tenants."
+    },
+    {
+      "id": "rq12",
+      "member": "Member 6 · Mohamed Ahmed (16008868)",
+      "question": "Does knowing the last 3 months of street work help PREDICT next month's housing problems in a neighborhood?",
+      "why": "This is the practical test of the whole project. If street permits carry real signal, HPD could use DOT data for planning.",
+      "method": "Linear models on log(1+problems): (a) month-of-year only, (b) the neighborhood's own past problems (lags 1, 2, 3, 12) + season, (c) model b + street-work lags, (d) street-work lags + season. Trained on 2022-2024, scored on 2025 (out-of-sample R2 and mean absolute error).",
+      "chart": "Bar chart of out-of-sample R2 per model: one number per model, easy to compare.",
+      "answer": "**Street permits add no predictive power.** A model using only a neighborhood's own complaint history plus season predicts 2025 out-of-sample with **R² = 0.924**. Adding 15 street-work lag features gives **0.925**, an improvement of 0.0001, and mean absolute error barely moves (67.6 → 67.5 problems). Street-work lags plus season alone reach only R² = 0.13. That is the same as \"where is it dense\", because permits also mark busy places. This is the clearest evidence that the spatial link in RQ1 comes from shared neighborhood characteristics, not a street-to-home mechanism.",
+      "limits": "These are linear models on log counts. A non-linear model could find small effects, but the gap would have to be large to matter in practice. The test covers one year (2025)."
+    }
+  ],
+  "team": [
+    {
+      "name": "Takiee-Allah",
+      "id": "16001345",
+      "rqs": "RQ1, RQ2",
+      "role": "Data loading from the Socrata API (paged, resumable download), dataset overview, EDA of both datasets."
+    },
+    {
+      "name": "Kirolous Bassem",
+      "id": "16002081",
+      "rqs": "RQ3, RQ4",
+      "role": "H6 pre-integration cleaning: text standardization, category harmonization, duplicates, missing-value imputation from the same building."
+    },
+    {
+      "name": "Ziad Khaled Saber Abdullah",
+      "id": "17006438",
+      "rqs": "RQ5, RQ6",
+      "role": "T3 pre-integration cleaning: date/duration rules, IQR outlier capping of permit sizes, WKT geometry to points, spatial join to NTAs."
+    },
+    {
+      "name": "Ahmed Hany",
+      "id": "16004257",
+      "rqs": "RQ7, RQ8",
+      "role": "Integration (NTA x month grid, street x month and borough x month tables) and post-integration cleaning and validation."
+    },
+    {
+      "name": "Abdallah Ahmed Mohamed",
+      "id": "16004141",
+      "rqs": "RQ9, RQ10",
+      "role": "Dash website: dropdown filters, search mode parser, Generate Report callback, map and chart components."
+    },
+    {
+      "name": "Mohamed Ahmed",
+      "id": "16008868",
+      "rqs": "RQ11, RQ12",
+      "role": "Feature engineering (densities, lags, z-scores), statistical testing, GitHub repository, Render deployment, README."
+    }
+  ],
+  "prompts": [
+    "Review our two datasets (H6 Housing Maintenance Code Complaints ygpa-z7cr and T3 Street Construction Permits tqtj-sjs8) against the Milestone 1 requirements and propose an integration key and granularity.",
+    "Write a resumable, paged Socrata download for both datasets for 2022-2025 and a cleaning pipeline (missing values, IQR outliers, inconsistent labels, duplicates, standardized dates/strings/geography).",
+    "Place every street permit in a 2020 Neighborhood Tabulation Area using its WKT geometry (spatial join) and aggregate both datasets to neighborhood x month, then do the post-integration cleaning.",
+    "Propose 12 non-trivial research questions (2 per team member) that connect both domains, with one appropriate chart each, and implement them with honest statistics (densities, Spearman, within-borough, lags, out-of-sample prediction).",
+    "Build a Dash website with dropdown filters, a free-text search mode, a Generate Report button, a map, a cross-domain scatter and a story section, and prepare it for Render deployment."
+  ],
+  "summary_table": "| RQ | Member | Short answer |\n|---|---|---|\n| 1 | Takiee-Allah | Strong spatial link (ρ = 0.65), but reversed inside Manhattan (−0.78): commercial cores vs residential uptown |\n| 2 | Takiee-Allah | Opposite seasons: complaints peak Dec–Jan (heat), permits peak Mar and Jun; ρ = −0.28 |\n| 3 | Kirolous | Same street with vs without gas work: no increase in heat/gas complaints (ratio 0.96 in heat season) |\n| 4 | Kirolous | No lead–lag link at 0–3 months: all 16 within-neighborhood correlations ≈ 0 |\n| 5 | Ziad | 18 double-burden neighborhoods vs 12 expected; clusters in West Bronx and Upper Manhattan |\n| 6 | Ziad | Bronx in January has 6.6 problems per permit; Staten Island under 0.6 all year |\n| 7 | Ahmed Hany | Close times differ by about 5 hours between street-work quartiles: significant but irrelevant |\n| 8 | Ahmed Hany | Astoria, Mount Hope, Fordham Heights and the Staten Island North Shore top the within-borough index |\n| 9 | Abdallah | High-heat-complaint areas: building-operation permits 48% of permits (vs 18%); less utility work |\n| 10 | Abdallah | Growth in permits does not predict growth in complaints (ρ = −0.01) |\n| 11 | Mohamed | Density is the only strong cross-domain link; dense-complaint areas have more confirmed violations |\n| 12 | Mohamed | Adding street-work lags to prediction: R² 0.924 → 0.925, no practical gain |",
+  "subtitle": "Do the New York neighborhoods with the most street construction also suffer the most housing maintenance problems, and does street work cause them? HPD complaints (H6) meet DOT street permits (T3) for 197 residential neighborhoods × 48 months, 2022–2025.",
+  "question": [
+    "Every year DOT issues more than 600,000 permits to dig up, block or build on NYC streets, and HPD receives about 750,000–850,000 tenant-reported housing problems. Gas mains, water mains, scaffolds and street openings sit right outside the buildings tenants complain about.",
+    "**Our question:** are street disruption and housing distress concentrated in the same neighborhoods, and if so, does street work come *before* indoor problems (a mechanism), or do both simply reflect the same kind of place (a shared cause)?"
+  ],
+  "data": [
+    "**H6** Housing Maintenance Code Complaints and Problems (HPD, `ygpa-z7cr`): **3,160,386** problems received 2022–2025, **3,153,693** after cleaning.",
+    "**T3** Street Construction Permits (DOT, `tqtj-sjs8`): **2,577,722** permits issued 2022–2025, **2,575,684** after removing voided permits.",
+    "There is no shared key. H6 carries a neighborhood (NTA) name. T3 carries only a street geometry (WKT), which we turned into points and **spatially joined** to the official 2020 NTA boundaries. Permits without geometry were placed from other permits on the same street segment.",
+    "Both were aggregated to **neighborhood × month** (197 residential NTAs × 48 months = 9,456 rows). We also built a street × month table (same normalized street name) and a borough × month table."
+  ],
+  "discovery": [
+    "**Same places:** neighborhoods with dense street work also have dense housing problems (ρ = 0.65). 18 neighborhoods, concentrated in the West Bronx and Upper Manhattan, are in the top quartile for both, against 12 expected by chance.",
+    "**Surprise 1, Manhattan flips:** inside Manhattan the link is *negative* (ρ = −0.78). Midtown has the most permits and few complaints, while Harlem and Washington Heights have the most complaints and fewer permits.",
+    "**Surprise 2, no mechanism:** on the same street, months with gas-main work do not have more heat or gas complaints. Within neighborhoods, utility work is not followed by matching complaints 0–3 months later. Growth in permits does not go with growth in complaints. Adding street-work history to a forecasting model improves R² by only 0.0001.",
+    "**Opposite seasons:** complaints peak in December–January (heat season), permits in March and June. In the Bronx in January there are 6.6 housing problems for every street permit."
+  ],
+  "limits": [
+    "**Correlation is not causation.** The spatial overlap is best explained by shared drivers (dense, older, lower-income residential housing stock) that we did not measure, not by street work causing complaints.",
+    "A permit is permission to work, not proof of the days work happened or of a service shut-off.",
+    "Monthly and neighborhood aggregation can hide very short or very local effects. A null result means \"not detectable at this scale\".",
+    "Complaints measure reporting, not all housing problems: tenants who do not call 311 are invisible.",
+    "Densities are per km² because no population table was joined. Per-resident rates could change some rankings."
+  ],
+  "impact": [
+    "**HPD and DOT planners:** the double-burden map and the within-borough ranking (RQ5, RQ8) show where residents face both problems. These are good places for joint outreach and for coordinating street work with housing inspections.",
+    "**HPD staffing:** forecasting next month's complaints should rely on a neighborhood's own history and the heat season (R² 0.92). DOT permit feeds add nothing, which saves effort.",
+    "**Tenant advocates:** concentrated problems in the West Bronx and Upper Manhattan are not \"construction noise\". Violation rates are higher there and no-access rates lower, so complaints reflect confirmed conditions.",
+    "**Residents:** street work outside your building is unlikely to be what causes heat or plumbing failures inside it. Report those to HPD either way."
+  ],
+  "links": {
+    "H6 · Housing Maintenance Code Complaints and Problems (HPD)": "https://data.cityofnewyork.us/d/ygpa-z7cr",
+    "T3 · Street Construction Permits 2022-Present (DOT)": "https://data.cityofnewyork.us/d/tqtj-sjs8",
+    "2020 Neighborhood Tabulation Areas (DCP, boundaries only)": "https://data.cityofnewyork.us/d/9nt8-h7nd"
+  }
+}

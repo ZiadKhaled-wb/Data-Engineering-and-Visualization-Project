@@ -1,0 +1,34 @@
+field_name,name,data_type,description
+received_date,Received Date,calendar_date,Date when the complaint was received
+problem_id,Problem ID,number,Unique identifier of this problem
+complaint_id,Complaint ID,number,Unique identifier of the complaint this problem is associated with
+building_id,Building ID,number,Unique identifier given to a building record
+borough,Borough,text,Complaint borough
+house_number,House Number,text,Complaint house number
+street_name,Street Name,text,Complaint street name
+post_code,Post Code,text,Complaint zip code
+block,Block,number,"""Number assigned by DoF identifying the Tax  block the lot is on"""
+lot,Lot,number,"""Unique number assigned by DoF within a Block  identifying a lot"""
+apartment,Apartment,text,Number of the unit or apartment in a building
+community_board,Community Board,number,"""Unique number identifying a Community  District/Board, which is a political geographical  area within a borough of the City of NY"""
+unit_type,Unit Type,text,Type of space where the problem was reported 
+space_type,Space Type,text,Type of space where the problem was reported
+type,Type,text,Code indicating the problem type
+major_category,Major Category,text,The major category of the problem
+minor_category,Minor Category,text,The minor category of the problem
+problem_code,Problem Code,text,The problem code
+complaint_status,Complaint Status,text,The status of the complaint
+complaint_status_date,Complaint Status Date,calendar_date,Date when the complaint status was updated
+problem_status,Problem Status,text,The status of the problem
+problem_status_date,Problem Status Date,calendar_date,Status description
+status_description,Status Description,text,
+problem_duplicate_flag,Problem Duplicate Flag,text,Duplicate complaint Indicator 
+complaint_anonymous_flag,Complaint Anonymous Flag,text,Anonymous complaint Indicator
+unique_key,Unique Key,text,Unique identifier of a Service Request (SR) in the open data set * Ties to 311
+latitude,Latitude,number,
+longitude,Longitude,number,
+council_district,Council District,number,
+census_tract,Census Tract,number,
+bin,BIN,number,
+bbl,BBL,number,
+nta,NTA,text,

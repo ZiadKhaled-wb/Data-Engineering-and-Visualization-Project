@@ -1,0 +1,120 @@
+column,dtype,missing_%,example,description
+nta_code,category,0.0,BK0101,Neighborhood Tabulation Area 2020 code (e.g. BX0601) - join key part 1
+year_month,datetime64[ns],0.0,2022-01-01 00:00:00,First day of the month - join key part 2
+nta_name,category,0.0,Greenpoint,Neighborhood name
+borough,category,0.0,BROOKLYN,Borough (from the NTA code)
+cdta_code,category,0.0,BK01,Community District Tabulation Area code
+area_km2,float64,0.0,3.28,Neighborhood land area in km²
+h6_problems,int32,0.0,293,H6: all problems reported (incl. HPD duplicate reports)
+h6_unique_problems,int32,0.0,198,H6: problems without HPD duplicate reports
+h6_complaints,int32,0.0,246,H6: distinct complaints
+h6_buildings,int32,0.0,92,H6: distinct buildings with a complaint
+h6_emergency_problems,int32,0.0,247,H6: problems classed EMERGENCY or IMMEDIATE EMERGENCY
+h6_open_problems,int32,0.0,0,H6: problems still open
+h6_violations,int32,0.0,16,H6: inspections that issued a violation
+h6_no_violation,int32,0.0,47,H6: inspections with no violation
+h6_no_access,int32,0.0,70,H6: inspector could not get access
+h6_median_days_to_close,float64,0.05,5.07,H6: median days to close (capped); NaN if no closed problems
+h6_grp_heat_hot_water,int32,0.0,211,H6: problems in group HEAT_HOT_WATER
+h6_grp_pests,int32,0.0,5,H6: problems in group PESTS
+h6_grp_mold,int32,0.0,10,H6: problems in group MOLD
+h6_grp_gas,int32,0.0,2,H6: problems in group GAS
+h6_grp_water_plumbing,int32,0.0,14,H6: problems in group WATER_PLUMBING
+h6_grp_electric,int32,0.0,11,H6: problems in group ELECTRIC
+h6_grp_structure,int32,0.0,32,H6: problems in group STRUCTURE
+h6_grp_other,int32,0.0,8,H6: problems in group OTHER
+t3_permits,int32,0.0,348,T3: permits issued (all application types)
+t3_new_jobs,int32,0.0,151,T3: NEW + EMERGENCY permits (no renewals)
+t3_emergency_permits,int32,0.0,8,T3: EMERGENCY permits
+t3_utility_permits,int32,0.0,46,T3: permits held by utility companies
+t3_street_openings,int32,0.0,71,T3: STREET OPENING permits (street dug open)
+t3_median_duration_days,float64,0.0,51.0,T3: median work window in days (capped); NaN if no permits
+t3_total_linear_feet,float64,0.0,9896.0,T3: total permitted street length in feet (capped)
+t3_kind_gas,int32,0.0,14,T3: permits of work kind GAS
+t3_kind_water_sewer,int32,0.0,15,T3: permits of work kind WATER_SEWER
+t3_kind_steam,int32,0.0,0,T3: permits of work kind STEAM
+t3_kind_electric_telecom,int32,0.0,17,T3: permits of work kind ELECTRIC_TELECOM
+t3_kind_paving,int32,0.0,1,T3: permits of work kind PAVING
+t3_kind_street_reconstruction,int32,0.0,0,T3: permits of work kind STREET_RECONSTRUCTION
+t3_kind_building_operation,int32,0.0,194,T3: permits of work kind BUILDING_OPERATION
+t3_kind_refuse_container,int32,0.0,74,T3: permits of work kind REFUSE_CONTAINER
+t3_kind_occupancy_equipment,int32,0.0,4,T3: permits of work kind OCCUPANCY_EQUIPMENT
+t3_kind_sidewalk_curb,int32,0.0,15,T3: permits of work kind SIDEWALK_CURB
+t3_kind_tree,int32,0.0,14,T3: permits of work kind TREE
+t3_kind_other,int32,0.0,0,T3: permits of work kind OTHER
+t3_active_permit_days,float64,0.0,4008.19,T3: days of permitted work falling inside this month (all permits)
+t3_active_permits,int32,0.0,304,T3: permits active at some point during this month
+h6_problems_per_km2,float64,0.0,89.32926829268293,h6_problems divided by neighborhood area (km²)
+h6_unique_problems_per_km2,float64,0.0,60.36585365853659,h6_unique_problems divided by neighborhood area (km²)
+h6_grp_heat_hot_water_per_km2,float64,0.0,64.32926829268293,H6: problems in group HEAT_HOT_WATER_PER_KM2
+h6_grp_pests_per_km2,float64,0.0,1.524390243902439,H6: problems in group PESTS_PER_KM2
+t3_permits_per_km2,float64,0.0,106.09756097560977,t3_permits divided by neighborhood area (km²)
+t3_new_jobs_per_km2,float64,0.0,46.03658536585366,t3_new_jobs divided by neighborhood area (km²)
+t3_street_openings_per_km2,float64,0.0,21.646341463414636,t3_street_openings divided by neighborhood area (km²)
+t3_active_permit_days_per_km2,float64,0.0,1222.0091463414635,t3_active_permit_days divided by neighborhood area (km²)
+h6_heat_share,float64,0.05,0.7201365187713311,H6: heat/hot-water problems / all problems
+h6_emergency_share,float64,0.05,0.8430034129692833,H6: emergency problems / all problems
+h6_violation_rate,float64,0.67,0.25396825396825395,H6: violations / (violations + no violation)
+h6_no_access_rate,float64,0.05,0.23890784982935154,H6: no-access results / all problems
+h6_problems_per_building,float64,0.05,3.1847826086956523,H6: problems per building with a complaint
+t3_emergency_share,float64,0.0,0.022988505747126436,T3: emergency permits / all permits
+t3_utility_share,float64,0.0,0.13218390804597702,T3: utility permits / all permits
+t3_new_job_share,float64,0.0,0.4339080459770115,T3: new jobs / all permits
+log_h6_problems,float64,0.0,5.683579767338681,log(1 + h6_problems)
+log_h6_grp_heat_hot_water,float64,0.0,5.356586274672012,log(1 + h6_grp_heat_hot_water)
+log_t3_permits,float64,0.0,5.855071922202427,log(1 + t3_permits)
+log_t3_active_permit_days,float64,0.0,8.296344504884406,log(1 + t3_active_permit_days)
+log_h6_problems_per_km2,float64,0.0,4.503461530749036,log_h6_problems divided by neighborhood area (km²)
+log_t3_permits_per_km2,float64,0.0,4.67374020385741,log_t3_permits divided by neighborhood area (km²)
+t3_permits_lag1,float64,2.08,348.0,t3_permits in the same neighborhood 1 month(s) earlier
+t3_permits_lag2,float64,4.17,348.0,t3_permits in the same neighborhood 2 month(s) earlier
+t3_permits_lag3,float64,6.25,348.0,t3_permits in the same neighborhood 3 month(s) earlier
+t3_permits_roll3,float64,0.0,348.0,t3_permits summed over this and the previous 2 months
+t3_new_jobs_lag1,float64,2.08,151.0,t3_new_jobs in the same neighborhood 1 month(s) earlier
+t3_new_jobs_lag2,float64,4.17,151.0,t3_new_jobs in the same neighborhood 2 month(s) earlier
+t3_new_jobs_lag3,float64,6.25,151.0,t3_new_jobs in the same neighborhood 3 month(s) earlier
+t3_new_jobs_roll3,float64,0.0,151.0,t3_new_jobs summed over this and the previous 2 months
+t3_street_openings_lag1,float64,2.08,71.0,t3_street_openings in the same neighborhood 1 month(s) earlier
+t3_street_openings_lag2,float64,4.17,71.0,t3_street_openings in the same neighborhood 2 month(s) earlier
+t3_street_openings_lag3,float64,6.25,71.0,t3_street_openings in the same neighborhood 3 month(s) earlier
+t3_street_openings_roll3,float64,0.0,71.0,t3_street_openings summed over this and the previous 2 months
+t3_emergency_permits_lag1,float64,2.08,8.0,t3_emergency_permits in the same neighborhood 1 month(s) earlier
+t3_emergency_permits_lag2,float64,4.17,8.0,t3_emergency_permits in the same neighborhood 2 month(s) earlier
+t3_emergency_permits_lag3,float64,6.25,8.0,t3_emergency_permits in the same neighborhood 3 month(s) earlier
+t3_emergency_permits_roll3,float64,0.0,8.0,t3_emergency_permits summed over this and the previous 2 months
+t3_kind_gas_lag1,float64,2.08,14.0,T3: permits of work kind GAS_LAG1
+t3_kind_gas_lag2,float64,4.17,14.0,T3: permits of work kind GAS_LAG2
+t3_kind_gas_lag3,float64,6.25,14.0,T3: permits of work kind GAS_LAG3
+t3_kind_gas_roll3,float64,0.0,14.0,T3: permits of work kind GAS_ROLL3
+t3_kind_water_sewer_lag1,float64,2.08,15.0,T3: permits of work kind WATER_SEWER_LAG1
+t3_kind_water_sewer_lag2,float64,4.17,15.0,T3: permits of work kind WATER_SEWER_LAG2
+t3_kind_water_sewer_lag3,float64,6.25,15.0,T3: permits of work kind WATER_SEWER_LAG3
+t3_kind_water_sewer_roll3,float64,0.0,15.0,T3: permits of work kind WATER_SEWER_ROLL3
+t3_kind_paving_lag1,float64,2.08,1.0,T3: permits of work kind PAVING_LAG1
+t3_kind_paving_lag2,float64,4.17,1.0,T3: permits of work kind PAVING_LAG2
+t3_kind_paving_lag3,float64,6.25,1.0,T3: permits of work kind PAVING_LAG3
+t3_kind_paving_roll3,float64,0.0,1.0,T3: permits of work kind PAVING_ROLL3
+t3_active_permit_days_lag1,float64,2.08,4008.19,t3_active_permit_days in the same neighborhood 1 month(s) earlier
+t3_active_permit_days_lag2,float64,4.17,4008.19,t3_active_permit_days in the same neighborhood 2 month(s) earlier
+t3_active_permit_days_lag3,float64,6.25,4008.19,t3_active_permit_days in the same neighborhood 3 month(s) earlier
+t3_active_permit_days_roll3,float64,0.0,4008.19,t3_active_permit_days summed over this and the previous 2 months
+h6_problems_lag1,float64,2.08,293.0,h6_problems in the same neighborhood 1 month(s) earlier
+h6_problems_lag2,float64,4.17,293.0,h6_problems in the same neighborhood 2 month(s) earlier
+h6_problems_lag3,float64,6.25,293.0,h6_problems in the same neighborhood 3 month(s) earlier
+h6_problems_roll3,float64,0.0,293.0,h6_problems summed over this and the previous 2 months
+h6_grp_heat_hot_water_lag1,float64,2.08,211.0,H6: problems in group HEAT_HOT_WATER_LAG1
+h6_grp_heat_hot_water_lag2,float64,4.17,211.0,H6: problems in group HEAT_HOT_WATER_LAG2
+h6_grp_heat_hot_water_lag3,float64,6.25,211.0,H6: problems in group HEAT_HOT_WATER_LAG3
+h6_grp_heat_hot_water_roll3,float64,0.0,211.0,H6: problems in group HEAT_HOT_WATER_ROLL3
+h6_problems_yoy_change,float64,25.04,0.034129692832764506,h6_problems: relative change vs the same month one year earlier
+h6_grp_heat_hot_water_yoy_change,float64,27.01,-0.5450236966824644,H6: problems in group HEAT_HOT_WATER_YOY_CHANGE
+t3_permits_yoy_change,float64,25.0,0.06896551724137931,t3_permits: relative change vs the same month one year earlier
+t3_new_jobs_yoy_change,float64,25.0,0.1986754966887417,t3_new_jobs: relative change vs the same month one year earlier
+h6_problems_per_km2_z_borough,float64,0.0,-0.7068251943328842,h6_problems_per_km2 (log density) z-score within the same borough and month
+t3_permits_per_km2_z_borough,float64,0.0,0.728385216283737,t3_permits_per_km2 (log density) z-score within the same borough and month
+year,int16,0.0,2022,Calendar year
+month,int8,0.0,1,Month number 1-12
+quarter,int8,0.0,1,Quarter 1-4
+season,category,0.0,WINTER,WINTER/SPRING/SUMMER/FALL
+is_heat_season,bool,0.0,True,True for Oct-May (NYC heat season)
+month_index,int16,0.0,0,Months since the start of the window (0 = first month)

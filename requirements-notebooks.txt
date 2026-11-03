@@ -1,0 +1,13 @@
+# Everything needed to re-run the notebooks (pipeline + research questions)
+-r requirements.txt
+requests>=2.31
+matplotlib>=3.8
+seaborn>=0.13
+geopandas>=0.14
+shapely>=2.0
+pyproj>=3.6
+kaleido>=0.2
+nbformat
+jupyter
+nbconvert
+ipykernel

@@ -1,0 +1,11 @@
+dataset,step,rows_before,rows_after,rows_removed,note
+H6,received_date inside window,3160386,3160386,0,
+H6,exact duplicate rows,3160386,3160386,0,
+H6,repeated problem_id (kept latest status),3160386,3160386,0,
+H6,borough conflicts with NTA borough,3160386,3154092,6294,
+H6,no neighborhood (NTA) could be found,3154092,3153693,399,
+T3,voided permits,2577722,2575684,2038,
+T3,issue_date inside window,2575684,2575684,0,
+T3,valid borough,2575684,2575684,0,
+T3,exact duplicate rows,2575684,2575684,0,
+T3,repeated permit_number (kept latest),2575684,2575684,0,

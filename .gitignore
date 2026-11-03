@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+# large raw downloads and row-level cleaned tables (re-created by notebook 01)
+data/raw/
+data/processed/h6_clean.parquet
+data/processed/t3_clean.parquet
+data/processed/integrated_nta_month.csv
