@@ -1,0 +1,9 @@
+.venv
+.git
+data/raw
+data/processed/h6_clean.parquet
+data/processed/t3_clean.parquet
+data/processed/integrated_nta_month.csv
+notebooks
+docs
+__pycache__

@@ -5,7 +5,7 @@
 GIU · Faculty of Informatics and Computer Science · Data Engineering and Visualization, Winter 2026 · Milestone 1
 Dr. Nada Sharaf · TAs Mariam Ali, May Magdy, Mohamed El dagla
 
-> **Live website:** `https://<your-render-service>.onrender.com` *(add the link after deploying, see section 5)*
+> **Live website:** `https://<your-project>.vercel.app` *(add the link after deploying, see section 5)*
 
 ---
 
@@ -59,7 +59,8 @@ borough totals.
 ├── assets/style.css                    website styling
 ├── requirements.txt                    website dependencies (deployment)
 ├── requirements-notebooks.txt          everything needed to re-run the notebooks
-├── Procfile, render.yaml               deployment (Render / Heroku)
+├── vercel/                             slim copy of the website for Vercel (section 5)
+├── Procfile, render.yaml, Dockerfile   other deployment options (Render / Docker)
 └── .gitignore                          excludes raw downloads and the big row-level parquet files
 ```
 
@@ -86,17 +87,21 @@ python app.py                     # http://127.0.0.1:8050
 The processed outputs are committed, so **step 3 works right after cloning**. Steps 1–2 are only needed to reproduce
 the data.
 
-## 5. Deploy (Render, free)
+## 5. Deploy (Vercel, free)
 
-1. Push this repository to GitHub (the processed `data/processed/*.parquet|csv|geojson` and `data/app/` must be included).
-2. On https://render.com choose **New → Blueprint** and select the repo. `render.yaml` configures everything. Or create a
-   **Web Service** manually:
-   - Build command: `pip install -r requirements.txt`
-   - Start command: `gunicorn app:server --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 120`
-   - Instance type: Free
+The `vercel/` folder is a slim copy of the website made for Vercel's free plan. It has the same `app.py` code
+(as `dash_app.py`), the same data files and the same charts, but it leaves out `scipy` and `pyarrow` to stay under
+Vercel's 500 MB limit. The live Spearman ρ is computed with pandas ranks (identical value), and parquet files are read
+with the smaller `fastparquet`. The full pipeline and notebooks still use scipy and pyarrow.
+
+1. On https://vercel.com choose **Add New → Project** and import this GitHub repository.
+2. Set **Root Directory** to `vercel` (Vercel detects the Flask/Python app automatically) and click **Deploy**.
 3. Open the URL and test: change the dropdowns, type `Bronx 2024 heat gas` in search, press **Generate Report**, switch
    map layers, and open the other tabs.
 4. Put the URL at the top of this README and in the submission email.
+
+If you change `app.py`, `src/analysis.py` or the data, copy them into `vercel/` again (`app.py` becomes
+`vercel/dash_app.py`). `render.yaml`, `Procfile` and `Dockerfile` are kept for hosts that run a normal Python server.
 
 ## 6. Website features (requirement checklist)
 
@@ -114,12 +119,12 @@ the data.
 
 | Member | ID | Research questions & charts | Data engineering / website work |
 |---|---|---|---|
-| Takiee-Allah | 16001345 | RQ1 density scatter · RQ2 seasonal timeline | Socrata API download (paged, resumable), dataset overview, EDA of both datasets |
+| Takiee-Allah | 16001345 | RQ1 density scatter · RQ5 double-burden map | Socrata API download (paged, resumable), dataset overview, EDA of both datasets |
 | Kirolous Bassem | 16002081 | RQ3 same-street gas test · RQ4 lag correlations | H6 pre-integration cleaning: text standardization, label harmonization, duplicates, imputation from the same building |
-| Ziad Khaled Saber Abdullah | 17006438 | RQ5 double-burden map · RQ6 borough × month heatmap | T3 pre-integration cleaning: dates/durations, IQR outlier capping, WKT → points, spatial join to NTAs |
+| Ziad Khaled Saber Abdullah | 17006438 | RQ2 seasonal timeline · RQ6 borough × month heatmap | T3 pre-integration cleaning: dates/durations, IQR outlier capping, WKT → points, spatial join to NTAs |
 | Ahmed Hany | 16004257 | RQ7 close-time box plot · RQ8 top-15 ranking | Integration (NTA × month grid, street and borough tables), post-integration cleaning and validation |
 | Abdallah Ahmed Mohamed | 16004141 | RQ9 work mix stacked bars · RQ10 change-on-change scatter | Dash website: dropdowns, search parser, Generate Report callback, map and chart components |
-| Mohamed Ahmed | 16008868 | RQ11 correlation matrix · RQ12 prediction test | Feature engineering (densities, lags, z-scores), statistics, GitHub repository, Render deployment, README |
+| Mohamed Ahmed | 16008868 | RQ11 correlation matrix · RQ12 prediction test | Feature engineering (densities, lags, z-scores), statistics, GitHub repository, Vercel deployment, README |
 
 *(Team: adjust the role column if your real split was different. It is graded.)*
 

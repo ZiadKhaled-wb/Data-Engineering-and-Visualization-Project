@@ -195,7 +195,7 @@ story.append(table([
     ['Website: central "Generate Report" button', 'Rebuilds KPIs + 7 charts', 'Done'],
     ['Variety of interactive charts incl. a cross-domain one', 'Map, scatter, timeline, lag bars, ranking, heatmap, box', 'Done'],
     ['Story section', 'Website tab "Our story"', 'Done'],
-    ['Deployed on a free platform', 'Render config ready (render.yaml, Procfile)', '**TO DO**: deploy + test'],
+    ['Deployed on a free platform', 'Vercel-ready slim copy in `vercel/`', '**TO DO**: deploy + test'],
     ['GitHub repo with full source + README (setup, deploy, contributions)', 'README.md written', '**TO DO**: push to the team repo'],
     ['Contribution documentation', 'README §7, NB01 header, website "Team & data" tab', '**Check** the roles are accurate'],
     ['Submission email to ICS503Data@gmail.com by 9 Nov 2026', 'IDs, repo link, deployment link, dataset links', '**TO DO**'],
@@ -372,15 +372,13 @@ story += bullets([
     'CSVs (its counts are not real).',
     'Notebook 02 runs in about 1 minute and writes `visualizations/*.png` (needs `kaleido` for PNGs) and `data/app/`.',
 ])
-story.append(P('Deploy on Render (free)', 'h2'))
+story.append(P('Deploy on Vercel (free)', 'h2'))
 story += bullets([
-    'Push the repository to GitHub, including `data/processed` (except the two big *_clean.parquet files, which are '
-    'git-ignored) and `data/app`.',
-    'render.com → New → Blueprint → select the repo (`render.yaml` sets everything), or New → Web Service with build '
-    '`pip install -r requirements.txt` and start `gunicorn app:server --bind 0.0.0.0:$PORT --workers 1 --threads 4 '
-    '--timeout 120`.',
-    'Test every control on the live URL. The free plan sleeps after inactivity, so **open the link 2 minutes before '
-    'the evaluation** to wake it up.',
+    'The `vercel/` folder is a slim copy of the website: same code and data, but without scipy and pyarrow so it fits '
+    'Vercel\'s 500 MB Python limit. The live Spearman ρ uses pandas ranks (same value) and parquet is read with fastparquet.',
+    'vercel.com → Add New → Project → import the GitHub repo → set **Root Directory** to `vercel` → Deploy.',
+    'Test every control on the live URL. The first request after a quiet period is slower (cold start), so **open the '
+    'link 2 minutes before the evaluation**.',
     'The map uses the free Carto basemap. If a network blocks it, set the environment variable `MAP_STYLE=white-bg`.',
 ])
 story.append(P('Repository layout', 'h2'))
@@ -481,12 +479,12 @@ story.append(PageBreak())
 story.append(P('12. Before submission: open tasks and per-member checklist', 'h1'))
 story.append(table([
     ['#', 'Task', 'Owner'],
-    ['1', 'Replace the contents of the team GitHub repo (Abdel-mohymen/project) with the finished `nyc-h6-t3-project` folder. The old `app.py` there uses generated data and must not be submitted.', 'Repo owner (Abdel-mohymen)'],
-    ['2', 'Deploy on Render, test every control, and add the live URL to README line 8.', 'Mohamed Ahmed / repo owner'],
+    ['1', 'Push the finished project (including the `vercel/` folder) to the team repo github.com/ZiadKhaled-wb/Data-Engineering-and-Visualization-Project.', 'Ziad'],
+    ['2', 'Deploy on Vercel (Root Directory `vercel`), test every control, and add the live URL to README line 8.', 'Ziad / Mohamed Ahmed'],
     ['3', 'Check the contribution table (README §7, NB01 header, website Team tab in `tools/rq_meta.py`). It is graded; adjust to what each person really did.', 'Everyone'],
     ['4', 'Each member re-runs or at least opens notebook 02 and reads their two RQs and the Q&A section.', 'Everyone'],
     ['5', 'Send the email to ICS503Data@gmail.com before 9 Nov 2026: all 6 IDs, repo link, deployment link, the 3 dataset links.', 'Team leader'],
-    ['6', 'On evaluation day, open the Render link 2 minutes early (the free plan sleeps).', 'Presenter'],
+    ['6', 'On evaluation day, open the Vercel link 2 minutes early (cold start).', 'Presenter'],
 ], [8 * mm, 122 * mm, 40 * mm]))
 story.append(P('Per-member preparation', 'h2'))
 for m in TEXT['team']:

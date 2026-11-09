@@ -7,18 +7,18 @@ M5 = 'Member 5 · Abdallah Ahmed Mohamed (16004141)'
 M6 = 'Member 6 · Mohamed Ahmed (16008868)'
 
 TEAM = [
-    {'name': 'Takiee-Allah', 'id': '16001345', 'rqs': 'RQ1, RQ2',
+    {'name': 'Takiee-Allah', 'id': '16001345', 'rqs': 'RQ1, RQ5',
      'role': 'Data loading from the Socrata API (paged, resumable download), dataset overview, EDA of both datasets.'},
     {'name': 'Kirolous Bassem', 'id': '16002081', 'rqs': 'RQ3, RQ4',
      'role': 'H6 pre-integration cleaning: text standardization, category harmonization, duplicates, missing-value imputation from the same building.'},
-    {'name': 'Ziad Khaled Saber Abdullah', 'id': '17006438', 'rqs': 'RQ5, RQ6',
+    {'name': 'Ziad Khaled Saber Abdullah', 'id': '17006438', 'rqs': 'RQ2, RQ6',
      'role': 'T3 pre-integration cleaning: date/duration rules, IQR outlier capping of permit sizes, WKT geometry to points, spatial join to NTAs.'},
     {'name': 'Ahmed Hany', 'id': '16004257', 'rqs': 'RQ7, RQ8',
      'role': 'Integration (NTA x month grid, street x month and borough x month tables) and post-integration cleaning and validation.'},
     {'name': 'Abdallah Ahmed Mohamed', 'id': '16004141', 'rqs': 'RQ9, RQ10',
      'role': 'Dash website: dropdown filters, search mode parser, Generate Report callback, map and chart components.'},
     {'name': 'Mohamed Ahmed', 'id': '16008868', 'rqs': 'RQ11, RQ12',
-     'role': 'Feature engineering (densities, lags, z-scores), statistical testing, GitHub repository, Render deployment, README.'},
+     'role': 'Feature engineering (densities, lags, z-scores), statistical testing, GitHub repository, Vercel deployment, README.'},
 ]
 
 RQS = [
@@ -27,7 +27,7 @@ RQS = [
          why='If the same places carry both burdens, city agencies could coordinate street work and housing inspections there.',
          method='Totals per neighborhood for 2022-2025, divided by land area and years (per km2 per year). Spearman rank correlation across all residential neighborhoods, then again inside each borough to remove the borough-level confounder.',
          chart='Log-log scatter (one dot per neighborhood, coloured by borough): both densities span several orders of magnitude, so log axes show the spread honestly.'),
-    dict(id='rq2', member=M1,
+    dict(id='rq2', member=M3,
          question='Do the two domains peak in the same months of the year, or in opposite seasons?',
          why='Timing matters for staffing: if streets are busiest when complaints are lowest, inspectors and crews compete less for the same months.',
          method='City-wide monthly totals, each turned into an index (average month = 100) so both fit on one axis. Month-of-year averages identify each peak and low.',
@@ -42,7 +42,7 @@ RQS = [
          why='A lead-lag pattern would let HPD anticipate complaint spikes from permits that DOT has already issued.',
          method='For 4 work-to-problem pairs and lags 0-3 months: remove each neighborhood average and each month average (two-way demeaning), then Spearman correlation. Fisher 95% confidence intervals.',
          chart='Grouped bar chart of correlation by lag with 95% error bars: shows size, direction and uncertainty together.'),
-    dict(id='rq5', member=M3,
+    dict(id='rq5', member=M1,
          question='Which neighborhoods carry a "double burden": top quartile for BOTH housing problems and street work per km2?',
          why='These are the places where residents live with both indoor housing problems and outdoor street disruption. That makes them candidates for coordinated action.',
          method='Neighborhood densities for 2022-2025. Each neighborhood is classed by whether it is in the top 25% for H6, for T3, for both, or for neither. The number of "both" is compared with what independence would give (25% x 25%).',
