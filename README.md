@@ -5,7 +5,7 @@
 GIU · Faculty of Informatics and Computer Science · Data Engineering and Visualization, Winter 2026 · Milestone 1
 Dr. Nada Sharaf · TAs Mariam Ali, May Magdy, Mohamed El dagla
 
-> **Live website:** `https://<your-project>.vercel.app` *(add the link after deploying, see section 5)*
+> **Live website:** https://vercel-gamma-liart-26.vercel.app/
 
 ---
 
