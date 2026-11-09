@@ -5,7 +5,7 @@ Housing Maintenance Code Complaints (H6, HPD, ygpa-z7cr)  x  Street Construction
 Integrated at neighborhood (NTA 2020) x month level by notebooks/01_cleaning_integration.ipynb.
 
 Run locally:   python app.py            -> http://127.0.0.1:8050
-Deploy:        gunicorn app:server      (see README.md, Render instructions)
+Deploy:        gunicorn app:server, or the slim copy in vercel/ (see README.md section 5)
 
 Data used by the website (all REAL, produced by the notebooks; nothing is simulated):
     data/processed/integrated_nta_month.parquet   main table (one row per residential neighborhood per month)
@@ -99,7 +99,7 @@ H6_KEYWORDS = {'HEAT': 'h6_grp_heat_hot_water', 'HOT WATER': 'h6_grp_heat_hot_wa
                'PESTS': 'h6_grp_pests', 'PEST': 'h6_grp_pests', 'MICE': 'h6_grp_pests', 'ROACH': 'h6_grp_pests',
                'RATS': 'h6_grp_pests', 'MOLD': 'h6_grp_mold', 'MOULD': 'h6_grp_mold', 'ELECTRIC': 'h6_grp_electric',
                'STRUCTURE': 'h6_grp_structure', 'PLASTER': 'h6_grp_structure', 'CEILING': 'h6_grp_structure',
-               'COMPLAINT': 'h6_problems', 'HOUSING': 'h6_problems'}
+               'COMPLAINT': 'h6_problems', 'HOUSING': 'h6_problems', 'PROBLEM': 'h6_problems'}
 # keyword -> T3 work kind (street side)
 T3_KEYWORDS = {'SEWER': 't3_kind_water_sewer', 'WATER MAIN': 't3_kind_water_sewer', 'PAVING': 't3_kind_paving',
                'RESURFACING': 't3_kind_paving', 'STEAM': 't3_kind_steam', 'TELECOM': 't3_kind_electric_telecom',
@@ -110,7 +110,10 @@ T3_KEYWORDS = {'SEWER': 't3_kind_water_sewer', 'WATER MAIN': 't3_kind_water_sewe
                'CRANE': 't3_kind_occupancy_equipment', 'EQUIPMENT': 't3_kind_occupancy_equipment',
                'DUMPSTER': 't3_kind_refuse_container', 'CONTAINER': 't3_kind_refuse_container',
                'EXCAVATION': 't3_street_openings', 'OPENING': 't3_street_openings', 'DIG': 't3_street_openings',
-               'EMERGENCY': 't3_emergency_permits', 'PERMIT': 't3_permits', 'STREET': 't3_permits'}
+               'EMERGENCY': 't3_emergency_permits', 'PERMIT': 't3_permits', 'STREET': 't3_permits',
+               'WORK': 't3_permits'}
+# generic words only select "all ..." when no specific keyword of the same domain is present
+GENERIC_KEYWORDS = {'COMPLAINT', 'HOUSING', 'PROBLEM', 'PERMIT', 'STREET', 'WORK'}
 # words that belong to BOTH domains: 'gas' and 'water' set the matching category on each side
 SHARED_KEYWORDS = {'GAS': ('h6_grp_gas', 't3_kind_gas'), 'WATER': ('h6_grp_water_plumbing', 't3_kind_water_sewer'),
                    'ELECTRICAL': ('h6_grp_electric', 't3_kind_electric_telecom')}
@@ -126,25 +129,34 @@ def parse_search(text: str) -> dict:
     q = re.sub(r'\s+', ' ', q)
     found = {}
 
-    def take(keyword_map, key):
+    def take(keyword_map, generic=False):
+        """Return the value of the first keyword found (longest first, so 'HOT WATER' beats 'WATER') and remove it.
+        generic=False only looks at specific keywords, generic=True only at the generic ones (and strips all of them)."""
         nonlocal q
-        for kw in sorted(keyword_map, key=len, reverse=True):
+        hit = None
+        for kw in sorted((k for k in keyword_map if (k in GENERIC_KEYWORDS) == generic), key=len, reverse=True):
             if re.search(rf'\b{kw}S?\b', q):
                 q = re.sub(rf'\b{kw}S?\b', ' ', q)
-                return keyword_map[kw]
-        return None
+                hit = hit or keyword_map[kw]
+                if not generic:
+                    break
+        return hit
 
-    found['borough'] = take(BOROUGH_ALIASES, 'borough')
+    found['borough'] = take(BOROUGH_ALIASES)
     m = re.search(r'\b(20\d\d)\b', q)
     if m and int(m.group(1)) in YEARS:
         found['year'] = int(m.group(1))
         q = q.replace(m.group(1), ' ')
-    h6 = take(H6_KEYWORDS, 'h6')
-    t3 = take(T3_KEYWORDS, 't3')
-    shared = take({k: k for k in SHARED_KEYWORDS}, 'shared')
+    # priority: specific keyword of the domain > shared word (gas, water, electrical) > generic word (complaints, permits)
+    h6 = take(H6_KEYWORDS)
+    t3 = take(T3_KEYWORDS)
+    shared = take({k: k for k in SHARED_KEYWORDS})
     if shared:
         h6 = h6 or SHARED_KEYWORDS[shared][0]
         t3 = t3 or SHARED_KEYWORDS[shared][1]
+    h6 = h6 or take(H6_KEYWORDS, generic=True)
+    t3 = t3 or take(T3_KEYWORDS, generic=True)
+    take(H6_KEYWORDS, generic=True), take(T3_KEYWORDS, generic=True)   # strip leftovers so they are not read as places
     found['h6'], found['t3'] = h6, t3
     # neighborhood: any remaining word of 4+ letters that appears in an NTA name
     words = [w for w in q.split() if len(w) >= 4]
@@ -239,19 +251,20 @@ def fig_scatter(df, h6_col, t3_col):
 
 
 def fig_timeline(df, h6_col, t3_col):
+    """Both monthly series as an index (average month of the selection = 100) on ONE shared axis,
+    the same method as RQ2: no dual axes, so the two lines are directly comparable."""
     city = df.groupby('year_month')[[h6_col, t3_col]].sum()
     if city.empty or city.sum().sum() == 0:
         return empty_figure()
+    idx = city / city.mean().replace(0, np.nan) * 100
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=city.index, y=city[h6_col], name=H6_OPTIONS[h6_col] + ' (H6)',
-                             line=dict(color=COLOR_H6, width=2.5)))
-    fig.add_trace(go.Scatter(x=city.index, y=city[t3_col], name=T3_OPTIONS[t3_col] + ' (T3)',
-                             line=dict(color=COLOR_T3, width=2.5), yaxis='y2'))
-    fig.update_layout(yaxis=dict(title=dict(text='Housing problems', font=dict(color=COLOR_H6))),
-                      yaxis2=dict(title=dict(text='Street permits', font=dict(color=COLOR_T3)), overlaying='y',
-                                  side='right', showgrid=False),
-                      hovermode='x unified')
-    fig = _layout(fig, 'Timeline · monthly totals (left axis = housing, right axis = streets)')
+    for col, name, color in ((h6_col, H6_OPTIONS[h6_col] + ' (H6)', COLOR_H6),
+                             (t3_col, T3_OPTIONS[t3_col] + ' (T3)', COLOR_T3)):
+        fig.add_trace(go.Scatter(x=idx.index, y=idx[col], name=name, line=dict(color=color, width=2.5),
+                                 customdata=city[col], hovertemplate='%{y:.0f} (count %{customdata:,.0f})'))
+    fig.add_hline(y=100, line_color='#999', line_width=1, line_dash='dot')
+    fig.update_layout(yaxis_title='Index (average month = 100)', hovermode='x unified')
+    fig = _layout(fig, 'Timeline · monthly index, average month = 100 (one shared axis)')
     fig.update_layout(legend=dict(orientation='h', y=-0.18, x=0, xanchor='left', yanchor='top'))
     return fig
 
@@ -265,8 +278,8 @@ def fig_heatmap(df, h6_col, t3_col):
     ratio.columns = MONTH_NAMES
     fig = px.imshow(ratio, text_auto='.2f', aspect='auto', color_continuous_scale='Blues',
                     labels=dict(x='Month of year', y='', color='ratio'))
-    return _layout(fig, f'Heatmap · {H6_OPTIONS[h6_col]} per {T3_OPTIONS[t3_col].lower()} permit, by month',
-                   height=380)
+    return _layout(fig, f'Heatmap · housing problems per street permit by month '
+                        f'({H6_OPTIONS[h6_col]} ÷ {T3_OPTIONS[t3_col]})', height=380)
 
 
 def fig_top(df, h6_col, t3_col, top=12):
@@ -304,8 +317,8 @@ def fig_lag(df, h6_col, t3_col):
     fig = px.bar(t, x='lag', y='rho', error_y='hi', error_y_minus='lo', color_discrete_sequence=[COLOR_T3],
                  labels={'lag': f'{H6_OPTIONS[h6_col]} measured …', 'rho': 'within-neighborhood ρ'})
     fig.add_hline(y=0, line_color='#555', line_width=1)
-    return _layout(fig, f'Timing test · does {T3_OPTIONS[t3_col].lower()} come before more '
-                        f'{H6_OPTIONS[h6_col].lower()}? (95% CI)')
+    return _layout(fig, f'Timing test · is street work followed by more housing problems? '
+                        f'({T3_OPTIONS[t3_col]} → {H6_OPTIONS[h6_col]}, 95% CI)')
 
 
 def fig_box(df):
@@ -327,7 +340,7 @@ def fig_box(df):
 # 4. Layout
 # ==============================================================================================
 app = dash.Dash(__name__, title='NYC Homes × NYC Streets', suppress_callback_exceptions=True)
-server = app.server  # used by gunicorn on Render
+server = app.server  # WSGI server: used by gunicorn and by the Vercel entrypoint
 
 TEAM = STORY.get('team', [])
 

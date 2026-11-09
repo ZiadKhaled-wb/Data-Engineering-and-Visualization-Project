@@ -60,7 +60,7 @@ borough totals.
 ├── requirements.txt                    website dependencies (deployment)
 ├── requirements-notebooks.txt          everything needed to re-run the notebooks
 ├── vercel/                             slim copy of the website for Vercel (section 5)
-├── Procfile, render.yaml, Dockerfile   other deployment options (Render / Docker)
+├── Procfile, Dockerfile               other deployment options (any gunicorn host / Docker)
 └── .gitignore                          excludes raw downloads and the big row-level parquet files
 ```
 
@@ -101,7 +101,7 @@ with the smaller `fastparquet`. The full pipeline and notebooks still use scipy 
 4. Put the URL at the top of this README and in the submission email.
 
 If you change `app.py`, `src/analysis.py` or the data, copy them into `vercel/` again (`app.py` becomes
-`vercel/dash_app.py`). `render.yaml`, `Procfile` and `Dockerfile` are kept for hosts that run a normal Python server.
+`vercel/dash_app.py`). `Procfile` and `Dockerfile` are kept for hosts that run a normal Python server.
 
 ## 6. Website features (requirement checklist)
 
@@ -110,7 +110,7 @@ If you change `app.py`, `src/analysis.py` or the data, copy them into `vercel/` 
 | Multiple dropdown filters | Borough, Year, Housing problem type (H6), Street-work kind (T3), Neighborhood(s) |
 | Search mode | Free text such as `Brooklyn 2022 new buildings`, `Bronx heat gas`, `Astoria water sewer 2024`. The parser recognizes boroughs (and aliases), years, housing keywords, street-work keywords and neighborhood names, then **sets the dropdowns** to what it understood |
 | Central **Generate Report** button | Rebuilds the KPIs and all 7 charts from the current filters/search (Enter in the search box does the same) |
-| Variety of interactive charts | Choropleth map (3 layers), log-log scatter, dual-line timeline, lag-correlation bars with CIs, ranked bars, heatmap, box plot. All have hover/zoom |
+| Variety of interactive charts | Choropleth map (3 layers), log-log scatter, shared-index timeline (one axis), lag-correlation bars with CIs, ranked bars, heatmap, box plot. All have hover/zoom |
 | Cross-domain visualization | Map "double burden" layer, scatter H6 vs T3 density, timing test, heatmap ratio |
 | Story section | "Our story" tab: question, data, discovery, limits, impact |
 | 12 research questions | "12 research questions" tab with the charts and answers from notebook 02 |
